@@ -18,7 +18,11 @@ export type PersonalProjectCollection = {
   images: GalleryImage[];
 };
 
-const landscape = (file: string, alt: string, layout: GalleryLayout = 'standard'): GalleryImage => ({
+const landscape = (
+  file: string,
+  alt: string,
+  layout: GalleryLayout = 'standard',
+): GalleryImage => ({
   src: `/images/personal-projects/${file}`,
   alt,
   width: 1920,
@@ -166,7 +170,7 @@ export const personalProjectCollections: PersonalProjectCollection[] = [
   },
   {
     id: 'fashion',
-    title: 'Fashion & Lifestyle',
+    title: 'Travis Scott x Nike',
     description: 'Editorial fashion, e-commerce, and visual exploration.',
     categoryLabel: 'Web / Editorial',
     categories: ['web'],
