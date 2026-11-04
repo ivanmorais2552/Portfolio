@@ -1,0 +1,46 @@
+.panel {
+  min-height: 530px;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: var(--space-6);
+  border: 1px dashed var(--border);
+  background: var(--elevated);
+  color: var(--muted);
+  text-align: center;
+}
+
+.panel p {
+  max-width: 360px;
+  margin: 0;
+  font: 11px/1.6 var(--font-mono);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.cross {
+  position: relative;
+  width: 28px;
+  height: 28px;
+}
+
+.cross::before,
+.cross::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 13px;
+  width: 1px;
+  height: 28px;
+  background: var(--accent);
+}
+
+.cross::after {
+  transform: rotate(90deg);
+}
+
+@media (max-width: 700px) {
+  .panel {
+    min-height: 350px;
+  }
+}

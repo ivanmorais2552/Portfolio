@@ -3,6 +3,8 @@
 import { useState } from 'react';
 import { ArrowRight, Check, ChevronRight } from 'lucide-react';
 import { FultonImage } from './fulton-image';
+import utilityStyles from '@/styles/Utility.module.css';
+import styles from './FultonInteractions.module.css';
 
 const workflowItems = [
   {
@@ -54,17 +56,17 @@ export function WorkflowMap() {
   const [selected, setSelected] = useState('judging');
   const active = workflowItems.find((item) => item.id === selected) ?? workflowItems[0];
   return (
-    <div className="workflow-demo">
-      <div className="workflow-map" aria-label="Conference workflow map">
-        <div className="workflow-oversight">
-          <span className="workflow-oversight-line" />
+    <div className={styles.workflowDemo}>
+      <div className={styles.workflowMap} aria-label="Conference workflow map">
+        <div className={styles.workflowOversight}>
+          <span className={styles.workflowOversightLine} />
           Administration / oversight
         </div>
-        <div className="workflow-nodes">
+        <div className={styles.workflowNodes}>
           {workflowItems.map((item, index) => (
-            <div className="workflow-node-wrap" key={item.id}>
+            <div className={styles.workflowNodeWrap} key={item.id}>
               <button
-                className={`workflow-node ${selected === item.id ? 'is-selected' : ''}`}
+                className={`${styles.workflowNode} ${selected === item.id ? styles.workflowNodeSelected : ''}`}
                 onClick={() => setSelected(item.id)}
                 aria-pressed={selected === item.id}
               >
@@ -72,19 +74,19 @@ export function WorkflowMap() {
                 <ChevronRight size={15} />
               </button>
               {index < workflowItems.length - 1 && (
-                <ArrowRight className="workflow-arrow" size={18} aria-hidden="true" />
+                <ArrowRight className={styles.workflowArrow} size={18} aria-hidden="true" />
               )}
             </div>
           ))}
         </div>
       </div>
-      <div className="workflow-detail">
+      <div className={styles.workflowDetail}>
         <div>
-          <p className="eyebrow">Selected workflow</p>
+          <p className={utilityStyles.eyebrow}>Selected workflow</p>
           <h3>{active.label}</h3>
           <p>{active.description}</p>
         </div>
-        <div className="workflow-detail-image">
+        <div className={styles.workflowDetailImage}>
           <FultonImage
             src={active.image}
             alt={active.alt}
@@ -101,19 +103,19 @@ export function RoleSwitchDemo() {
   const [role, setRole] = useState<'judge' | 'lead'>('judge');
   const cards = role === 'judge' ? judgeCards : leadJudgeCards;
   return (
-    <div className="role-demo">
-      <div className="demo-toolbar">
+    <div className={styles.roleDemo}>
+      <div className={styles.demoToolbar}>
         <div>
-          <p className="eyebrow">Interactive portfolio recreation</p>
-          <p className="demo-note">
+          <p className={utilityStyles.eyebrow}>Interactive portfolio recreation</p>
+          <p className={styles.demoNote}>
             Fictional sample data used to demonstrate the role difference.
           </p>
         </div>
-        <div className="role-tabs" role="tablist" aria-label="Judging role">
+        <div className={styles.roleTabs} role="tablist" aria-label="Judging role">
           <button
             role="tab"
             aria-selected={role === 'judge'}
-            className={role === 'judge' ? 'is-active' : ''}
+            className={role === 'judge' ? styles.active : ''}
             onClick={() => setRole('judge')}
           >
             Judge
@@ -121,33 +123,35 @@ export function RoleSwitchDemo() {
           <button
             role="tab"
             aria-selected={role === 'lead'}
-            className={role === 'lead' ? 'is-active' : ''}
+            className={role === 'lead' ? styles.active : ''}
             onClick={() => setRole('lead')}
           >
             Lead Judge
           </button>
         </div>
       </div>
-      <div className="demo-interface">
+      <div className={styles.demoInterface}>
         <aside>
           <span>Fulton</span>
           <strong>{role === 'judge' ? 'Judge' : 'Lead Judge'}</strong>
           <small>April 2026 · Demo</small>
         </aside>
-        <div className="demo-main">
-          <div className="demo-title-row">
+        <div className={styles.demoMain}>
+          <div className={styles.demoTitleRow}>
             <div>
-              <p className="eyebrow">{role === 'judge' ? 'My dashboard' : 'Conference overview'}</p>
+              <p className={utilityStyles.eyebrow}>
+                {role === 'judge' ? 'My dashboard' : 'Conference overview'}
+              </p>
               <h3>{role === 'judge' ? 'Assigned research' : 'Judging progress'}</h3>
             </div>
-            <span className="demo-status">
+            <span className={styles.demoStatus}>
               <span />
               Live demo state
             </span>
           </div>
-          <div className="demo-card-grid">
+          <div className={styles.demoCardGrid}>
             {cards.map((card, index) => (
-              <div className="demo-card" key={card}>
+              <div className={styles.demoCard} key={card}>
                 <span>0{index + 1}</span>
                 <h4>{card}</h4>
                 <p>
@@ -163,13 +167,13 @@ export function RoleSwitchDemo() {
                         'Select and confirm winners.',
                       ][index]}
                 </p>
-                <div className="demo-bar">
+                <div className={styles.demoBar}>
                   <i style={{ width: `${[76, 52, 88][index]}%` }} />
                 </div>
               </div>
             ))}
           </div>
-          <button className="demo-action">
+          <button className={styles.demoAction}>
             {role === 'judge' ? 'Open assigned work' : 'Review conference progress'}
             <ArrowRight size={15} />
           </button>
@@ -207,13 +211,21 @@ const dashboardAnnotations = [
   },
 ];
 
+const hotspotStyles: Record<string, string> = {
+  submissions: styles.hotspotSubmissions,
+  presenters: styles.hotspotPresenters,
+  rsvp: styles.hotspotRsvp,
+  printing: styles.hotspotPrinting,
+  judging: styles.hotspotJudging,
+};
+
 export function AnnotatedDashboard() {
   const [selected, setSelected] = useState('submissions');
   const active =
     dashboardAnnotations.find((item) => item.id === selected) ?? dashboardAnnotations[0];
   return (
-    <div className="dashboard-demo">
-      <div className="dashboard-image-wrap">
+    <div className={styles.dashboardDemo}>
+      <div className={styles.dashboardImageWrap}>
         <FultonImage
           src="/images/fulton/admin/Home%20Dashboard.png"
           alt="Fulton admin home dashboard export"
@@ -221,11 +233,11 @@ export function AnnotatedDashboard() {
           height={2718}
           priority
         />
-        <div className="dashboard-hotspots">
+        <div className={styles.dashboardHotspots}>
           {dashboardAnnotations.map((item) => (
             <button
               key={item.id}
-              className={`dashboard-hotspot hotspot-${item.id} ${selected === item.id ? 'is-selected' : ''}`}
+              className={`${styles.dashboardHotspot} ${hotspotStyles[item.id]} ${selected === item.id ? styles.selected : ''}`}
               onClick={() => setSelected(item.id)}
               aria-label={`Show annotation for ${item.label}`}
               aria-pressed={selected === item.id}
@@ -235,12 +247,12 @@ export function AnnotatedDashboard() {
           ))}
         </div>
       </div>
-      <div className="dashboard-annotation">
-        <span className="annotation-index">
+      <div className={styles.dashboardAnnotation}>
+        <span className={styles.annotationIndex}>
           0{dashboardAnnotations.findIndex((item) => item.id === selected) + 1}
         </span>
         <div>
-          <p className="eyebrow">Dashboard annotation</p>
+          <p className={utilityStyles.eyebrow}>Dashboard annotation</p>
           <h3>{active.label}</h3>
           <p>{active.text}</p>
         </div>

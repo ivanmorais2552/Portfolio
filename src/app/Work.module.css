@@ -1,0 +1,9 @@
+.overview {
+  padding-top: 90px;
+}
+
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}

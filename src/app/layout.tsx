@@ -3,6 +3,7 @@ import './globals.css';
 import { SiteHeader } from '@/components/site-header';
 import { ThemeProvider } from '@/components/theme-provider';
 import { SiteFooter } from '@/components/site-footer';
+import layoutStyles from '@/styles/Layout.module.css';
 
 export const metadata: Metadata = {
   title: 'Ivan Morais — Product designer and developer',
@@ -12,10 +13,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en" data-scroll-behavior="smooth">
       <body>
         <ThemeProvider />
-        <div className="site-shell">
+        <div className={layoutStyles.siteShell}>
           <SiteHeader />
           {children}
           <SiteFooter />

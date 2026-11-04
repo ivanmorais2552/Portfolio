@@ -1,0 +1,509 @@
+.workflowDemo,
+.dashboardDemo {
+  margin-top: 64px;
+}
+
+.workflowMap {
+  border: 1px solid var(--border);
+  padding: 30px;
+  background: var(--elevated);
+}
+
+.workflowOversight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+  color: var(--muted);
+  font: 10px var(--font-mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.workflowOversightLine {
+  width: 28px;
+  height: 1px;
+  background: var(--accent);
+}
+
+.workflowNodes {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.workflowNodeWrap {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 10px;
+}
+
+.workflowNode {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 15px 14px;
+  background: var(--surface);
+  color: var(--text);
+  text-align: left;
+  font: 12px var(--font-mono);
+  cursor: pointer;
+}
+
+.workflowNode:hover,
+.workflowNodeSelected {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.workflowArrow {
+  flex: 0 0 auto;
+  color: var(--muted);
+}
+
+.workflowDetail {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.85fr) minmax(0, 1.5fr);
+  gap: 28px;
+  border: 1px solid var(--border);
+  border-top: 0;
+  padding: 28px;
+}
+
+.workflowDetail h3 {
+  margin: 14px 0 10px;
+  font-size: 28px;
+  letter-spacing: -0.05em;
+  font-weight: 500;
+}
+
+.workflowDetail p + p {
+  max-width: 380px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.workflowDetailImage {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.workflowDetailImage img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: top;
+}
+
+.roleDemo {
+  margin-top: 65px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.demoToolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-5);
+  border-bottom: 1px solid var(--border);
+  padding: 20px;
+}
+
+.demoNote {
+  margin: 7px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.roleTabs {
+  display: flex;
+  gap: 6px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 4px;
+}
+
+.roleTabs button {
+  border: 0;
+  border-radius: var(--radius-sm);
+  padding: 9px 12px;
+  background: transparent;
+  color: var(--muted);
+  font: 11px var(--font-mono);
+  cursor: pointer;
+}
+
+.roleTabs button.active {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+.demoInterface {
+  display: grid;
+  grid-template-columns: 155px 1fr;
+  min-height: 370px;
+}
+
+.demoInterface aside {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  border-right: 1px solid var(--border);
+  padding: 24px 18px;
+  background: var(--elevated);
+}
+
+.demoInterface aside span {
+  color: var(--accent);
+  font: 11px var(--font-mono);
+}
+
+.demoInterface aside strong {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.demoInterface aside small {
+  color: var(--muted);
+  font: 10px var(--font-mono);
+}
+
+.demoMain {
+  padding: 28px;
+}
+
+.demoTitleRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-5);
+}
+
+.demoTitleRow h3 {
+  margin: 10px 0 0;
+  font-size: 25px;
+  letter-spacing: -0.05em;
+  font-weight: 500;
+}
+
+.demoStatus {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--muted);
+  font: 10px var(--font-mono);
+}
+
+.demoStatus span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.demoCardGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.demoCard {
+  min-height: 155px;
+  border: 1px solid var(--border);
+  padding: 15px;
+}
+
+.demoCard > span {
+  color: var(--accent);
+  font: 10px var(--font-mono);
+}
+
+.demoCard h4 {
+  margin: 25px 0 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.demoCard p {
+  min-height: 37px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.demoBar {
+  height: 3px;
+  margin-top: 18px;
+  background: var(--border);
+}
+
+.demoBar i {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+}
+
+.demoAction {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: 26px;
+  border: 1px solid var(--border);
+  padding: 11px 14px;
+  background: transparent;
+  color: var(--text);
+  font: 10px var(--font-mono);
+  cursor: pointer;
+}
+
+.demoAction:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.dashboardImageWrap {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.dashboardImageWrap > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.dashboardHotspots {
+  position: absolute;
+  inset: 0;
+}
+
+.dashboardHotspot {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  padding: 0;
+  background: var(--surface);
+  cursor: pointer;
+}
+
+.dashboardHotspot::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.dashboardHotspot span {
+  position: absolute;
+  left: 32px;
+  white-space: nowrap;
+  border: 1px solid var(--border);
+  padding: 6px 8px;
+  background: var(--surface);
+  color: var(--text);
+  font: 10px var(--font-mono);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.dashboardHotspot:hover span,
+.dashboardHotspot.selected span,
+.dashboardHotspot:focus-visible span {
+  opacity: 1;
+}
+
+.dashboardHotspot.selected {
+  box-shadow: 0 0 0 5px #10b98133;
+}
+
+.hotspotSubmissions {
+  left: 35%;
+  top: 35%;
+}
+
+.hotspotPresenters {
+  left: 28%;
+  top: 49%;
+}
+
+.hotspotRsvp {
+  left: 63%;
+  top: 49%;
+}
+
+.hotspotPrinting {
+  left: 28%;
+  top: 63%;
+}
+
+.hotspotJudging {
+  left: 4%;
+  top: 29%;
+}
+
+.dashboardAnnotation {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  border: 1px solid var(--border);
+  border-top: 0;
+  padding: 22px;
+  background: var(--surface);
+}
+
+.dashboardAnnotation > div {
+  flex: 1;
+}
+
+.dashboardAnnotation h3 {
+  margin: 9px 0 6px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.dashboardAnnotation p + p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.annotationIndex {
+  color: var(--accent);
+  font: 12px var(--font-mono);
+}
+
+.dashboardAnnotation > svg {
+  color: var(--accent);
+}
+
+@media (max-width: 900px) and (min-width: 701px) {
+  .workflowDetail {
+    display: block;
+  }
+
+  .workflowDetailImage {
+    margin-top: 28px;
+  }
+
+  .demoCardGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .workflowDemo,
+  .dashboardDemo {
+    margin-top: 45px;
+  }
+
+  .workflowMap {
+    padding: 18px;
+  }
+
+  .workflowNodes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .workflowNodeWrap {
+    display: block;
+  }
+
+  .workflowArrow {
+    display: none;
+  }
+
+  .workflowDetail {
+    display: block;
+    padding: 18px;
+  }
+
+  .workflowDetailImage {
+    margin-top: 28px;
+  }
+
+  .roleDemo {
+    margin-top: 45px;
+  }
+
+  .demoToolbar {
+    display: block;
+  }
+
+  .roleTabs {
+    width: max-content;
+    margin-top: 18px;
+  }
+
+  .demoInterface {
+    display: block;
+  }
+
+  .demoInterface aside {
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .demoMain {
+    padding: 20px;
+  }
+
+  .demoTitleRow {
+    display: block;
+  }
+
+  .demoStatus {
+    margin-top: 15px;
+  }
+
+  .demoCardGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .demoCard {
+    min-height: 0;
+  }
+
+  .dashboardImageWrap {
+    overflow: visible;
+  }
+
+  .dashboardImageWrap > img {
+    min-height: 280px;
+    object-fit: cover;
+    object-position: left top;
+  }
+
+  .dashboardHotspot span {
+    display: none;
+  }
+
+  .dashboardHotspot:focus-visible span {
+    display: block;
+    left: 28px;
+  }
+
+  .dashboardAnnotation {
+    padding: 18px;
+  }
+}
