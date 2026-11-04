@@ -36,7 +36,7 @@
 
 .breadcrumb a:hover,
 .scroll:hover {
-  color: var(--accent);
+  color: var(--accent-hover);
 }
 
 .heroKicker {

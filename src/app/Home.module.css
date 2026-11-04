@@ -152,7 +152,7 @@
 }
 
 .contactBand .eyebrow {
-  color: #195b43;
+  color: var(--accent-label);
 }
 
 .contactBand h2 {
@@ -160,7 +160,7 @@
 }
 
 .contactBand h2 em {
-  color: #e0f9ed;
+  color: var(--accent-on-accent);
 }
 
 .buttonLink {
@@ -178,7 +178,7 @@
 }
 
 .buttonLink:hover {
-  color: #e0f9ed;
+  color: var(--accent-on-accent);
   background: var(--accent-ink);
 }
 

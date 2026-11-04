@@ -269,8 +269,8 @@
 }
 
 .demoAction:hover {
-  border-color: var(--accent);
-  color: var(--accent);
+  border-color: var(--accent-hover);
+  color: var(--accent-hover);
 }
 
 .dashboardImageWrap {
@@ -332,7 +332,7 @@
 }
 
 .dashboardHotspot.selected {
-  box-shadow: 0 0 0 5px #10b98133;
+  box-shadow: 0 0 0 5px var(--accent-ring);
 }
 
 .hotspotSubmissions {

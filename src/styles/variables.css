@@ -6,8 +6,12 @@
   --text: #181a19;
   --muted: #717872;
   --accent: #10b981;
+  --accent-hover: #059669;
   --accent-soft: #e5f6ef;
   --accent-ink: #07130e;
+  --accent-ring: #10b98133;
+  --accent-label: #195b43;
+  --accent-on-accent: #e0f9ed;
   --font-sans: 'Manrope', Arial, sans-serif;
   --font-mono: 'DM Mono', monospace;
   --space-1: 4px;
@@ -33,13 +37,17 @@
 }
 
 :root[data-theme='dark'] {
-  --bg: #101312;
-  --surface: #1b211e;
-  --elevated: #222925;
-  --border: #303833;
+  --bg: #080a09;
+  --surface: #121614;
+  --elevated: #1a201c;
+  --border: #29332d;
   --text: #f5f5f4;
   --muted: #a1aaa4;
-  --accent: #10b981;
+  --accent: #22c55e;
+  --accent-hover: #4ade80;
   --accent-soft: #123c2d;
   --accent-ink: #07130e;
+  --accent-ring: #22c55e33;
+  --accent-label: #064e3b;
+  --accent-on-accent: #ecfdf5;
 }

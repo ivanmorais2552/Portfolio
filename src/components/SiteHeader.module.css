@@ -29,7 +29,7 @@
 }
 
 .navigation a:hover {
-  color: var(--accent);
+  color: var(--accent-hover);
 }
 
 .contactLink {
