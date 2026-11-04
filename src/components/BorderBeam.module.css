@@ -1,0 +1,78 @@
+.beam {
+  /* TechnologyCard uses a 10px radius; inset the 2px head inside its clip. */
+  --beam-card-radius: 10px;
+  --beam-path-inset: 1px;
+  --beam-path-radius: calc(var(--beam-card-radius) - var(--beam-path-inset));
+  position: absolute;
+  z-index: 0;
+  inset: var(--beam-path-inset);
+  border: 0;
+  border-radius: var(--beam-path-radius);
+  pointer-events: none;
+}
+
+.beamHead {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: var(--beam-size);
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    #10b981 42%,
+    #bbf7d0 50%,
+    #10b981 58%,
+    transparent 100%
+  );
+  offset-anchor: 50% 50%;
+  offset-path: rect(0 auto auto 0 round var(--beam-path-radius));
+  offset-distance: 0%;
+  offset-rotate: auto;
+  animation: borderBeamTravel var(--beam-duration, 6s) linear infinite;
+}
+
+.phaseHalf {
+  animation-name: borderBeamTravelHalf;
+}
+
+@keyframes borderBeamTravel {
+  to {
+    offset-distance: 100%;
+  }
+}
+
+/*
+ * Start halfway around the same path and wrap at the midpoint of the cycle.
+ * The tiny interval makes the 100% -> 0% path reset explicit, so the second
+ * head never overlaps a previous animation cycle.
+ */
+@keyframes borderBeamTravelHalf {
+  0% {
+    offset-distance: 50%;
+  }
+
+  50% {
+    offset-distance: 100%;
+  }
+
+  50.001% {
+    offset-distance: 0%;
+  }
+
+  100% {
+    offset-distance: 50%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .beam {
+    border: 1px solid var(--accent);
+  }
+
+  .beamHead {
+    display: none;
+  }
+}

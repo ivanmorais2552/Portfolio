@@ -2,7 +2,9 @@ import Link from 'next/link';
 import { ArrowDown, ArrowUpRight, MoveUpRight } from 'lucide-react';
 import { FeaturedProject } from '@/components/FeaturedProject';
 import { ProjectCard } from '@/components/project-card';
+import { TechnologyCard } from '@/components/TechnologyCard';
 import { projects } from '@/lib/projects';
+import { technologyGroups } from '@/lib/technologies';
 import layoutStyles from '@/styles/Layout.module.css';
 import utilityStyles from '@/styles/Utility.module.css';
 import styles from './Home.module.css';
@@ -69,7 +71,7 @@ export default function HomePage() {
       <section className={`${styles.section} ${styles.capabilities} ${layoutStyles.pageContainer}`}>
         <div className={styles.sectionHeading}>
           <div>
-            <p className={utilityStyles.eyebrow}>03 / Capabilities</p>
+            <p className={utilityStyles.eyebrow}>03 / Skills &amp; Technologies</p>
             <h2>
               Curious by default.
               <br />
@@ -77,26 +79,17 @@ export default function HomePage() {
             </h2>
           </div>
         </div>
-        <div className={styles.capabilityGrid}>
-          <div>
-            <span>01</span>
-            <h3>Product design</h3>
-            <p>
-              Requirements gathering, user research, prioritization, roadmapping, and prototyping.
-            </p>
-          </div>
-          <div>
-            <span>02</span>
-            <h3>Design systems</h3>
-            <p>
-              Reusable Figma components and shared decisions that help teams move with consistency.
-            </p>
-          </div>
-          <div>
-            <span>03</span>
-            <h3>Full-stack development</h3>
-            <p>HTML, CSS, Angular, TypeScript, Node.js, PostgreSQL, and Python.</p>
-          </div>
+        <div className={styles.technologyGrid}>
+          {technologyGroups.map((group) => (
+            <div className={styles.technologyGroup} key={group.label}>
+              <h3>{group.label}</h3>
+              <div className={styles.technologyCards}>
+                {group.technologies.map((technology) => (
+                  <TechnologyCard technology={technology} key={technology.name} />
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </section>
       <section className={styles.contactBand}>

@@ -1,0 +1,113 @@
+.card {
+  --brand-color: var(--accent);
+  position: relative;
+  width: 100%;
+  height: 110px;
+  min-width: 0;
+  max-width: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 9px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--text);
+  outline: none;
+  transition: border-color 200ms ease;
+}
+
+.card:hover,
+.card:focus-visible {
+  border-color: transparent;
+}
+
+.technologyBeam {
+  opacity: 0;
+  vector-effect: non-scaling-stroke;
+  transition: opacity 200ms ease;
+}
+
+.card:hover .technologyBeam,
+.card:focus-visible .technologyBeam {
+  opacity: 1;
+}
+
+.logo {
+  position: relative;
+  z-index: 1;
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+}
+
+.logo img {
+  display: block;
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  filter: grayscale(1) brightness(1.65);
+  transition: filter 200ms ease;
+}
+
+.logo span {
+  color: currentColor;
+  font: 600 16px var(--font-mono);
+  letter-spacing: -0.06em;
+}
+
+.card:hover .logo,
+.card:focus-visible .logo {
+  color: var(--brand-color);
+}
+
+.card:hover .logo img,
+.card:focus-visible .logo img {
+  filter: none;
+}
+
+.card[aria-label='GitHub'] .logo img {
+  filter: brightness(0) invert(0.55);
+}
+
+.card[aria-label='GitHub']:hover .logo img,
+.card[aria-label='GitHub']:focus-visible .logo img {
+  filter: brightness(0);
+}
+
+:root[data-theme='dark'] .card[aria-label='GitHub']:hover .logo img,
+:root[data-theme='dark'] .card[aria-label='GitHub']:focus-visible .logo img {
+  filter: brightness(0) invert(1);
+}
+
+.name {
+  position: relative;
+  z-index: 1;
+  font-size: 13px;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+}
+
+@media (hover: none) {
+  .logo img {
+    filter: none;
+  }
+
+  .logo {
+    color: var(--brand-color);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo img {
+    transition: none;
+  }
+
+  .technologyBeam {
+    transition: none;
+  }
+}

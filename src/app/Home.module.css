@@ -105,43 +105,28 @@
   padding-bottom: 130px;
 }
 
-.capabilityGrid {
+.technologyGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  border-top: 1px solid var(--border);
+  gap: var(--space-12);
 }
 
-.capabilityGrid > div {
-  min-height: 180px;
-  margin-right: 28px;
-  border-right: 1px solid var(--border);
-  padding: 20px 28px 0 0;
+.technologyGroup {
+  display: grid;
+  gap: 18px;
 }
 
-.capabilityGrid > div:last-child {
-  margin: 0;
-  border: 0;
-}
-
-.capabilityGrid span {
-  color: var(--accent);
-  font: 11px var(--font-mono);
-}
-
-.capabilityGrid h3 {
-  margin: 36px 0 10px;
-  font-size: 20px;
-  line-height: var(--leading-small-heading);
-  letter-spacing: var(--tracking-heading);
-  font-weight: 500;
-}
-
-.capabilityGrid p {
-  max-width: 280px;
+.technologyGroup h3 {
   margin: 0;
   color: var(--muted);
-  font-size: 13px;
-  line-height: 1.6;
+  font: 11px var(--font-mono);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.technologyCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 160px);
+  gap: var(--space-3);
 }
 
 .contactBand {
@@ -231,20 +216,9 @@
     font-size: 43px;
   }
 
-  .capabilityGrid {
-    display: block;
-  }
-
-  .capabilityGrid > div {
-    min-height: 0;
-    margin: 0;
-    border-right: 0;
-    border-bottom: 1px solid var(--border);
-    padding: 20px 0 28px;
-  }
-
-  .capabilityGrid h3 {
-    margin-top: 25px;
+  .technologyCards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-3);
   }
 
   .contactBandInner {
