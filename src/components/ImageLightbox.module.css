@@ -1,0 +1,88 @@
+.backdrop {
+  position: fixed;
+  z-index: 20;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: #080a09f2;
+}
+
+.viewer {
+  width: min(1180px, 100%);
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.toolbar,
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.toolbar p {
+  margin: 0;
+  color: #a1aaa4;
+  font: 11px var(--font-mono);
+  letter-spacing: 0.05em;
+}
+
+.toolbar button,
+.controls button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #ffffff55;
+  padding: 9px 12px;
+  color: #fff;
+  background: transparent;
+  cursor: pointer;
+  font: 11px var(--font-mono);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.toolbar button:hover,
+.controls button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.toolbar button:focus-visible,
+.controls button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.imageFrame {
+  min-height: 0;
+  overflow: auto;
+  border: 1px solid #ffffff33;
+  background: #121614;
+}
+
+.imageFrame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: calc(100vh - 150px);
+  object-fit: contain;
+}
+
+.controls button:last-child {
+  margin-left: auto;
+}
+
+@media (max-width: 700px) {
+  .backdrop {
+    padding: 12px;
+  }
+
+  .imageFrame img {
+    max-height: calc(100vh - 132px);
+  }
+}

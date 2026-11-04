@@ -1,4 +1,5 @@
 import { FeaturedProject } from '@/components/FeaturedProject';
+import { PersonalProjectsPreview } from '@/components/PersonalProjectsPreview';
 import { ProjectCard } from '@/components/project-card';
 import { PageIntro } from '@/components/page-intro';
 import { projects } from '@/lib/projects';
@@ -21,6 +22,7 @@ export default function WorkPage() {
       />
       <section className={`${styles.overview} ${layoutStyles.pageContainer}`}>
         <FeaturedProject project={projects[0]} />
+        <PersonalProjectsPreview />
         <div className={styles.projectGrid}>
           {projects.slice(1).map((project) => (
             <ProjectCard project={project} key={project.slug} />

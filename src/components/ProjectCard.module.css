@@ -3,10 +3,6 @@
   min-width: 0;
 }
 
-.card:first-child {
-  grid-column: span 2;
-}
-
 .visual {
   position: relative;
   height: 350px;
@@ -15,10 +11,6 @@
   overflow: hidden;
   border: 1px solid var(--border);
   background: var(--elevated);
-}
-
-.card:first-child .visual {
-  height: 500px;
 }
 
 .mockWindow {
@@ -139,12 +131,7 @@
 }
 
 @media (max-width: 700px) {
-  .card:first-child {
-    grid-column: auto;
-  }
-
-  .visual,
-  .card:first-child .visual {
+  .visual {
     height: 285px;
   }
 
