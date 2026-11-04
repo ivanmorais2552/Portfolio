@@ -11,12 +11,12 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "fulton-conference-management",
+    slug: "fulton",
     title: "Fulton Conference Management",
-    summary: "Reframing complex conference operations around the people who make them work.",
+    summary: "An independently led redesign across five conference workflows.",
     role: "Lead UX/UI Designer",
     year: "2026",
-    discipline: "Product design · Angular",
+    discipline: "Product design · 38 screens",
     featured: true,
     accent: "emerald",
   },
