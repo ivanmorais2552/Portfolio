@@ -19,89 +19,122 @@ export type PersonalProjectCollection = {
 };
 
 const landscape = (
-  file: string,
+  path: string,
   alt: string,
   layout: GalleryLayout = 'standard',
 ): GalleryImage => ({
-  src: `/images/personal-projects/${file}`,
+  src: `/images/personal-projects/${path}`,
   alt,
   width: 1920,
   height: 1243,
   layout,
 });
 
-const portrait = (file: string, alt: string): GalleryImage => ({
-  src: `/images/personal-projects/${file}`,
+const portrait = (path: string, alt: string, width: number, height: number): GalleryImage => ({
+  src: `/images/personal-projects/${path}`,
   alt,
-  width: 882,
-  height: 1912,
+  width,
+  height,
   layout: 'portrait',
+});
+
+const graphic = (path: string, alt: string): GalleryImage => ({
+  src: `/images/personal-projects/${path}`,
+  alt,
+  width: 1920,
+  height: 1080,
+  layout: 'feature',
 });
 
 export const personalProjectCollections: PersonalProjectCollection[] = [
   {
-    id: 'nike',
-    title: 'Nike — E-commerce Concepts',
-    description: 'E-commerce interfaces and promotional designs.',
-    categoryLabel: 'Web / E-commerce',
+    id: 'travis-scott-nike',
+    title: 'Travis Scott × Nike',
+    description:
+      'An independent, unofficial creative concept exploring Nike and Travis Scott-inspired campaign design.',
+    categoryLabel: 'Campaign / E-commerce',
     categories: ['web'],
     images: [
       landscape(
-        '0a8d7daf-74af-4663-be82-2fda5dc20c60_rw_1920.png',
-        'Nike concept homepage with a bright orange collage and sticker-like product imagery',
+        'nike-travis-scott/01-la-flame-hero.png',
+        'Unofficial Travis Scott-inspired Nike campaign hero concept',
         'feature',
       ),
       landscape(
-        '3ea011e3-79c7-43fd-95e7-f6d62569219d_rw_1920.png',
-        'Nike concept category page with clothing, sports, and shoe collections',
+        'nike-travis-scott/02-product-grid.png',
+        'Unofficial Travis Scott-inspired Nike product grid concept',
       ),
       landscape(
-        '4b092d9b-50e8-412e-9949-78d34aaf9aa7_rw_1920.png',
-        'Nike concept campaign page with a tennis athlete and oversized swoosh',
+        'nike-travis-scott/03-new-clothing.png',
+        'Unofficial Travis Scott-inspired Nike clothing collection concept',
       ),
       landscape(
-        '63865e99-4d70-4888-bdf7-192bf10711c7_rw_1920.png',
-        'Nike concept editorial page for a V2K Run artist collection',
+        'nike-travis-scott/04-new-shoes.png',
+        'Unofficial Travis Scott-inspired Nike shoes collection concept',
       ),
       landscape(
-        '638a011f-ade8-4c10-a09a-dd9086d973be_rw_1920.png',
-        'Nike concept editorial page for new shoes',
+        'nike-travis-scott/05-music-section.png',
+        'Unofficial Travis Scott-inspired Nike music section concept',
+      ),
+    ],
+  },
+  {
+    id: 'y2k-nike',
+    title: 'Y2K Nike Redesign',
+    description:
+      'An experimental Nike website concept exploring Y2K-inspired visuals, bold typography, and expressive layouts.',
+    categoryLabel: 'Experimental Web Design',
+    categories: ['web'],
+    images: [
+      landscape(
+        'nike-y2k/01-black-simple-sleek.png',
+        'Nike Y2K redesign concept for a black, simple, sleek collection',
+        'feature',
       ),
       landscape(
-        '1489d100-ae52-462f-87a2-e6c5e9666f68_rw_1920.png',
-        'Nike concept sustainability editorial page',
+        'nike-y2k/02-step-into-the-future.png',
+        'Nike Y2K redesign concept with expressive Step Into the Future typography',
       ),
       landscape(
-        'c1120379-3255-4a30-96bc-9904de7056a9_rw_1920.png',
-        'Nike concept new clothing product grid',
+        'nike-y2k/03-new-kicks.png',
+        'Nike Y2K redesign concept for a New Kicks collection',
       ),
       landscape(
-        'c4f9837e-8dcd-46df-a0be-cdd09c441457_rw_1920.png',
-        'Nike concept clothing product grid with collaborative pieces',
+        'nike-y2k/04-sustainability.png',
+        'Nike Y2K redesign concept for a sustainability editorial section',
       ),
       landscape(
-        'f33652ad-211d-4c79-aee9-21fb95d7ca89_rw_1920.png',
-        'Nike concept new kicks editorial page',
+        'nike-y2k/05-air-collection.png',
+        'Nike Y2K redesign concept for an Air collection',
+      ),
+    ],
+  },
+  {
+    id: 'modern-nike',
+    title: 'Nike Modern Redesign',
+    description:
+      'A clean, contemporary Nike e-commerce redesign concept focused on product presentation and modern interface design.',
+    categoryLabel: 'E-commerce / Web Design',
+    categories: ['web'],
+    images: [
+      landscape(
+        'nike-modern/01-product-grid.png',
+        'Nike modern redesign concept product grid',
+        'feature',
+      ),
+      landscape('nike-modern/02-new-releases.png', 'Nike modern redesign concept for new releases'),
+      landscape(
+        'nike-modern/03-dunk-low-product.png',
+        'Nike modern redesign concept product page for a Dunk Low',
+      ),
+      landscape('nike-modern/04-footer.png', 'Nike modern redesign concept footer navigation'),
+      landscape(
+        'nike-modern/05-game-time-campaign.png',
+        'Nike modern redesign concept campaign section for Game Time',
       ),
       landscape(
-        'f67a80aa-0120-4abb-a729-a7fb01fc1afa_rw_1920.png',
-        'Nike concept product page for a fuzzy blue Dunk Low',
-      ),
-      landscape(
-        'cbc7d670-77eb-4eaf-8f84-40dc4751ab4d_rw_1920.png',
-        'Nike concept product feature page with colorful Air Max shoes',
-      ),
-      landscape(
-        'aec89fef-72ff-4f29-9f09-a06bfb937de6_rw_1920.png',
-        'Nike concept new shoes product grid',
-      ),
-      landscape(
-        'ed006203-6235-485e-a009-b3863983d7a9_rw_1920.png',
-        'Nike concept new releases landing page',
-      ),
-      landscape(
-        '6dd28a92-f63d-483a-aa82-9bc1276dd4ca_rw_1920.png',
-        'Nike concept e-commerce footer navigation',
+        'nike-modern/06-air-max-products.png',
+        'Nike modern redesign concept Air Max product presentation',
       ),
     ],
   },
@@ -113,29 +146,29 @@ export const personalProjectCollections: PersonalProjectCollection[] = [
     categories: ['web'],
     images: [
       landscape(
-        'ebdb0b72-dcf1-4fae-a40c-c4fb970a3992_rw_1920.png',
-        'Streaming platform concept home screen with shows and movies',
+        'streaming-platform/01-entertainment-home.png',
+        'Streaming platform concept entertainment home screen',
         'feature',
       ),
       landscape(
-        '10b44141-6c06-4c59-a1d0-02558aae8a05_rw_1920.png',
-        'College sports streaming concept home screen in orange and green',
+        'streaming-platform/02-sports-discovery.png',
+        'Streaming platform concept sports discovery screen',
       ),
       landscape(
-        '170fca83-9755-4a7c-a211-325020d472e1_rw_1920.png',
-        'College sports streaming concept home screen in blue',
+        'streaming-platform/03-sports-home.png',
+        'Streaming platform concept sports home screen',
       ),
       landscape(
-        '6e7b8df4-7c19-43b4-8ad9-643ab6bb0bcf_rw_1920.png',
-        'College sports streaming concept home screen in purple',
+        'streaming-platform/04-sports-team-page.png',
+        'Streaming platform concept sports team page',
       ),
       landscape(
-        '7c43b815-1d84-4bdc-bb96-e28b6ea965e2_rw_1920.png',
-        'College football streaming concept for a national championship',
+        'streaming-platform/05-football-team-page.png',
+        'Streaming platform concept football team page',
       ),
       landscape(
-        'faed6d79-6730-452c-bdea-86f8957dab15_rw_1920.png',
-        'College football streaming concept for a live studio broadcast',
+        'streaming-platform/06-sports-browse.png',
+        'Streaming platform concept sports browse screen',
       ),
     ],
   },
@@ -147,43 +180,25 @@ export const personalProjectCollections: PersonalProjectCollection[] = [
     categories: ['mobile'],
     images: [
       portrait(
-        'f8692a78-75d8-4bfc-9770-3d8159bbd0b6_rw_1200.png',
-        'Yeezy mobile music library concept with album artwork',
-      ),
-      portrait(
-        'f4e2f731-6c45-4ae8-9f6b-cd4e461f109c_rw_1200.png',
-        'Yeezy mobile shopping concept with new drops, sneakers, and clothes',
-      ),
-      portrait(
-        '45cabc3d-00c6-4ce2-ab40-603a5852764c_rw_1200.png',
+        'yeezy-mobile/01-splash-screen.png',
         'Yeezy mobile splash screen concept',
+        882,
+        1912,
       ),
       portrait(
-        '8104242e-e3dc-4e1c-a49a-6205f08b7a4a_rw_1200.png',
-        'Yeezy mobile playlist concept with track list and playback controls',
+        'yeezy-mobile/02-shopping.png',
+        'Yeezy mobile shopping concept with new drops, sneakers, and clothes',
+        880,
+        1910,
       ),
       portrait(
-        'e3e4a7db-8053-449a-9899-2595b51be79a_rw_1200.png',
-        'Yeezy mobile music player concept for an album',
+        'yeezy-mobile/03-music-library.png',
+        'Yeezy mobile music library concept with album artwork',
+        882,
+        1912,
       ),
-    ],
-  },
-  {
-    id: 'fashion',
-    title: 'Travis Scott x Nike',
-    description: 'Editorial fashion, e-commerce, and visual exploration.',
-    categoryLabel: 'Web / Editorial',
-    categories: ['web'],
-    images: [
-      landscape(
-        '88b93712-86fc-40bf-b852-a6ceed61d90b_rw_1920.png',
-        'Editorial music and lifestyle event listing concept',
-        'feature',
-      ),
-      landscape(
-        'cae80856-6578-4ecd-99c8-0123ae2ff04b_rw_1920.png',
-        'Editorial fashion and lifestyle visual composition',
-      ),
+      portrait('yeezy-mobile/04-album-detail.png', 'Yeezy mobile album detail concept', 880, 1914),
+      portrait('yeezy-mobile/05-music-player.png', 'Yeezy mobile music player concept', 884, 1906),
     ],
   },
   {
@@ -193,19 +208,20 @@ export const personalProjectCollections: PersonalProjectCollection[] = [
     categoryLabel: 'Graphic Design',
     categories: ['graphics'],
     images: [
-      {
-        src: '/images/personal-projects/a1e2458c-0a5b-4629-b817-30027fe5c1fb_rw_1920.jpg',
-        alt: 'Latino Experience event graphic for a BYU Latin American Studies art competition',
-        width: 1920,
-        height: 1080,
-        layout: 'feature',
-      },
+      graphic(
+        'latino-experience/01-event-graphic-a.jpg',
+        'Latino Experience event graphic for a Latin American Studies art competition',
+      ),
+      graphic(
+        'latino-experience/02-event-graphic-b.jpg',
+        'Latino Experience event graphic with bilingual visual communication',
+      ),
     ],
   },
 ];
 
 export const personalProjectPreviewImages = [
   personalProjectCollections[0].images[0],
-  personalProjectCollections[2].images[1],
-  personalProjectCollections[4].images[0],
+  personalProjectCollections[4].images[1],
+  personalProjectCollections[5].images[0],
 ];

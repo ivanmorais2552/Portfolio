@@ -3,7 +3,9 @@
   grid-template-columns: minmax(0, 1.55fr) minmax(260px, 0.9fr);
   border: 1px solid var(--border);
   background: var(--elevated);
-  transition: border-color var(--transition-standard), background-color var(--transition-standard);
+  transition:
+    border-color var(--transition-standard),
+    background-color var(--transition-standard);
 }
 
 .project:hover {

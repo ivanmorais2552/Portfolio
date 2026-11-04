@@ -10,7 +10,10 @@ import styles from './PersonalProjectsGallery.module.css';
 
 export function PersonalProjectsGallery() {
   const [filter, setFilter] = useState<GalleryFilter>('all');
-  const [lightbox, setLightbox] = useState<{ collection: PersonalProjectCollection; index: number } | null>(null);
+  const [lightbox, setLightbox] = useState<{
+    collection: PersonalProjectCollection;
+    index: number;
+  } | null>(null);
   const collections = useMemo(
     () =>
       personalProjectCollections.filter(
@@ -29,7 +32,9 @@ export function PersonalProjectsGallery() {
           current
             ? {
                 ...current,
-                index: (current.index - 1 + current.collection.images.length) % current.collection.images.length,
+                index:
+                  (current.index - 1 + current.collection.images.length) %
+                  current.collection.images.length,
               }
             : null,
         );
@@ -54,7 +59,7 @@ export function PersonalProjectsGallery() {
   return (
     <>
       <div className={styles.toolbar}>
-        <p>Browse by medium</p>
+        <p>06 collections</p>
         <CategoryFilter activeFilter={filter} onChange={setFilter} />
       </div>
       <div>
@@ -77,7 +82,8 @@ export function PersonalProjectsGallery() {
                 ? {
                     ...current,
                     index:
-                      (current.index - 1 + current.collection.images.length) % current.collection.images.length,
+                      (current.index - 1 + current.collection.images.length) %
+                      current.collection.images.length,
                   }
                 : null,
             )

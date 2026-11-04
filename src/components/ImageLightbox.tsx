@@ -21,7 +21,13 @@ export function ImageLightbox({
   const image = images[index];
 
   return (
-    <div className={styles.backdrop} role="dialog" aria-modal="true" aria-label="Image viewer" onClick={onClose}>
+    <div
+      className={styles.backdrop}
+      role="dialog"
+      aria-modal="true"
+      aria-label="Image viewer"
+      onClick={onClose}
+    >
       <div className={styles.viewer} onClick={(event) => event.stopPropagation()}>
         <div className={styles.toolbar}>
           <p>

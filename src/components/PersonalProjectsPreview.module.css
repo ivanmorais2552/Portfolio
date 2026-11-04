@@ -3,7 +3,9 @@
   margin-bottom: var(--space-16);
   border: 1px solid var(--border);
   background: var(--elevated);
-  transition: border-color var(--transition-standard), background-color var(--transition-standard);
+  transition:
+    border-color var(--transition-standard),
+    background-color var(--transition-standard);
 }
 
 .card:hover {
