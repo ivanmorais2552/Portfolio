@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+
+# Next.js output
+.next/
+out/
+
+# Build artifacts
+build/
+dist/
+
+# Local environment files
+.env*
+
+# macOS metadata
+.DS_Store
