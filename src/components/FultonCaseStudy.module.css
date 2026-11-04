@@ -49,8 +49,8 @@
   grid-column: 1;
   margin: 28px 0 0;
   font-size: clamp(58px, 9vw, 142px);
-  line-height: 0.93;
-  letter-spacing: -0.08em;
+  line-height: var(--leading-display);
+  letter-spacing: var(--tracking-display);
   font-weight: 500;
 }
 
@@ -174,8 +174,8 @@
 .sectionContent h2 {
   margin: 0;
   font-size: clamp(42px, 5vw, 78px);
-  line-height: 0.98;
-  letter-spacing: -0.075em;
+  line-height: var(--leading-heading);
+  letter-spacing: var(--tracking-heading);
   font-weight: 500;
 }
 

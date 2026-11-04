@@ -78,7 +78,8 @@
 .workflowDetail h3 {
   margin: 14px 0 10px;
   font-size: 28px;
-  letter-spacing: -0.05em;
+  line-height: var(--leading-heading);
+  letter-spacing: var(--tracking-heading);
   font-weight: 500;
 }
 
@@ -192,7 +193,8 @@
 .demoTitleRow h3 {
   margin: 10px 0 0;
   font-size: 25px;
-  letter-spacing: -0.05em;
+  line-height: var(--leading-heading);
+  letter-spacing: var(--tracking-heading);
   font-weight: 500;
 }
 
@@ -377,6 +379,7 @@
 .dashboardAnnotation h3 {
   margin: 9px 0 6px;
   font-size: 20px;
+  line-height: var(--leading-small-heading);
   font-weight: 500;
 }
 

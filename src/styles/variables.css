@@ -14,6 +14,11 @@
   --accent-on-accent: #e0f9ed;
   --font-sans: 'Manrope', Arial, sans-serif;
   --font-mono: 'DM Mono', monospace;
+  --tracking-display: -0.01em;
+  --tracking-heading: 0em;
+  --leading-display: 1.15;
+  --leading-heading: 1.2;
+  --leading-small-heading: 1.3;
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 12px;
