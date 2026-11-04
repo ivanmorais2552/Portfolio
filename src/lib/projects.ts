@@ -7,18 +7,22 @@ export type Project = {
   discipline: string;
   featured?: boolean;
   accent: string;
+  image?: string;
+  imageAlt?: string;
 };
 
 export const projects: Project[] = [
   {
     slug: 'fulton',
     title: 'Fulton Conference Management',
-    summary: 'An independently led redesign across five conference workflows.',
+    summary: 'Redesigning conference operations across judging, printing, and administration.',
     role: 'Lead UX/UI Designer',
     year: '2026',
     discipline: 'Product design · 38 screens',
     featured: true,
     accent: 'emerald',
+    image: '/images/fulton/admin/Home%20Dashboard.png',
+    imageAlt: 'Fulton Conference Management admin home dashboard',
   },
   {
     slug: 'research-grants-management',

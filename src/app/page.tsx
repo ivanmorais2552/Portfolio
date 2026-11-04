@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { ArrowDown, ArrowUpRight, MoveUpRight } from 'lucide-react';
+import { FeaturedProject } from '@/components/FeaturedProject';
 import { ProjectCard } from '@/components/project-card';
 import { projects } from '@/lib/projects';
 import layoutStyles from '@/styles/Layout.module.css';
@@ -43,8 +44,9 @@ export default function HomePage() {
             A selection of work across product design, systems thinking, and front-end development.
           </p>
         </div>
+        <FeaturedProject project={projects[0]} />
         <div className={styles.projectGrid}>
-          {projects.slice(0, 3).map((project) => (
+          {projects.slice(1, 3).map((project) => (
             <ProjectCard project={project} key={project.slug} />
           ))}
         </div>

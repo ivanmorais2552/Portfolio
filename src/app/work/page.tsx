@@ -1,3 +1,4 @@
+import { FeaturedProject } from '@/components/FeaturedProject';
 import { ProjectCard } from '@/components/project-card';
 import { PageIntro } from '@/components/page-intro';
 import { projects } from '@/lib/projects';
@@ -19,8 +20,9 @@ export default function WorkPage() {
         description="A selection of product design, systems, and development work. Case studies will grow as more project material becomes available."
       />
       <section className={`${styles.overview} ${layoutStyles.pageContainer}`}>
+        <FeaturedProject project={projects[0]} />
         <div className={styles.projectGrid}>
-          {projects.map((project) => (
+          {projects.slice(1).map((project) => (
             <ProjectCard project={project} key={project.slug} />
           ))}
         </div>
