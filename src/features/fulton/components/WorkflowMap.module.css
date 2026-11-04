@@ -1,0 +1,147 @@
+.workflowDemo {
+  margin-top: 64px;
+}
+
+.workflowMap {
+  border: 1px solid var(--border);
+  padding: 30px;
+  background: var(--elevated);
+}
+
+.workflowOversight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+  color: var(--muted);
+  font: 10px var(--font-mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.workflowOversightLine {
+  width: 28px;
+  height: 1px;
+  background: var(--accent);
+}
+
+.workflowNodes {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.workflowNodeWrap {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 10px;
+}
+
+.workflowNode {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 15px 14px;
+  background: var(--surface);
+  color: var(--text);
+  text-align: left;
+  font: 12px var(--font-mono);
+  cursor: pointer;
+}
+
+.workflowNode:hover,
+.workflowNodeSelected {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.workflowArrow {
+  flex: 0 0 auto;
+  color: var(--muted);
+}
+
+.workflowDetail {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.85fr) minmax(0, 1.5fr);
+  gap: 28px;
+  border: 1px solid var(--border);
+  border-top: 0;
+  padding: 28px;
+}
+
+.workflowDetail h3 {
+  margin: 14px 0 10px;
+  font-size: 28px;
+  line-height: var(--leading-heading);
+  letter-spacing: var(--tracking-heading);
+  font-weight: 500;
+}
+
+.workflowDetail p + p {
+  max-width: 380px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.workflowDetailImage {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.workflowDetailImage img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: top;
+}
+
+@media (max-width: 900px) and (min-width: 701px) {
+  .workflowDetail {
+    display: block;
+  }
+
+  .workflowDetailImage {
+    margin-top: 28px;
+  }
+}
+
+@media (max-width: 700px) {
+  .workflowDemo {
+    margin-top: 45px;
+  }
+
+  .workflowMap {
+    padding: 18px;
+  }
+
+  .workflowNodes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .workflowNodeWrap {
+    display: block;
+  }
+
+  .workflowArrow {
+    display: none;
+  }
+
+  .workflowDetail {
+    display: block;
+    padding: 18px;
+  }
+
+  .workflowDetailImage {
+    margin-top: 28px;
+  }
+}

@@ -1,34 +1,5 @@
-import { FeaturedProject } from '@/components/FeaturedProject';
-import { PersonalProjectsPreview } from '@/components/PersonalProjectsPreview';
-import { ProjectCard } from '@/components/project-card';
-import { PageIntro } from '@/components/page-intro';
-import { projects } from '@/lib/projects';
-import layoutStyles from '@/styles/Layout.module.css';
-import styles from '../Work.module.css';
+import { WorkPage } from '@/features/work/WorkPage';
 
-export default function WorkPage() {
-  return (
-    <main>
-      <PageIntro
-        label="01 / Selected work"
-        title={
-          <>
-            Work shaped by
-            <br />
-            <em>real constraints.</em>
-          </>
-        }
-        description="A selection of product design, systems, and development work. Case studies will grow as more project material becomes available."
-      />
-      <section className={`${styles.overview} ${layoutStyles.pageContainer}`}>
-        <FeaturedProject project={projects[0]} />
-        <PersonalProjectsPreview />
-        <div className={styles.projectGrid}>
-          {projects.slice(1).map((project) => (
-            <ProjectCard project={project} key={project.slug} />
-          ))}
-        </div>
-      </section>
-    </main>
-  );
+export default function Page() {
+  return <WorkPage />;
 }

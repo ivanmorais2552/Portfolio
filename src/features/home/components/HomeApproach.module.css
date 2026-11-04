@@ -1,0 +1,31 @@
+.statementSection {
+  border-block: 1px solid var(--border);
+  background: var(--elevated);
+}
+
+.statement {
+  padding-block: 130px;
+}
+
+.statementCopy {
+  max-width: 950px;
+  margin: 70px 0 64px;
+  font-size: clamp(38px, 6vw, 76px);
+  line-height: var(--leading-display);
+  letter-spacing: var(--tracking-display);
+}
+
+.statementCopy span {
+  color: var(--accent);
+}
+
+@media (max-width: 700px) {
+  .statement {
+    padding-block: 88px;
+  }
+
+  .statementCopy {
+    margin: 52px 0;
+    font-size: 43px;
+  }
+}

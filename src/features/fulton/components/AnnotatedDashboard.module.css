@@ -1,0 +1,156 @@
+.dashboardDemo {
+  margin-top: 64px;
+}
+
+.dashboardImageWrap {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.dashboardImageWrap > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.dashboardHotspots {
+  position: absolute;
+  inset: 0;
+}
+
+.dashboardHotspot {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  padding: 0;
+  background: var(--surface);
+  cursor: pointer;
+}
+
+.dashboardHotspot::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.dashboardHotspot span {
+  position: absolute;
+  left: 32px;
+  white-space: nowrap;
+  border: 1px solid var(--border);
+  padding: 6px 8px;
+  background: var(--surface);
+  color: var(--text);
+  font: 10px var(--font-mono);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.dashboardHotspot:hover span,
+.dashboardHotspot.selected span,
+.dashboardHotspot:focus-visible span {
+  opacity: 1;
+}
+
+.dashboardHotspot.selected {
+  box-shadow: 0 0 0 5px var(--accent-ring);
+}
+
+.hotspotSubmissions {
+  left: 35%;
+  top: 35%;
+}
+
+.hotspotPresenters {
+  left: 28%;
+  top: 49%;
+}
+
+.hotspotRsvp {
+  left: 63%;
+  top: 49%;
+}
+
+.hotspotPrinting {
+  left: 28%;
+  top: 63%;
+}
+
+.hotspotJudging {
+  left: 4%;
+  top: 29%;
+}
+
+.dashboardAnnotation {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  border: 1px solid var(--border);
+  border-top: 0;
+  padding: 22px;
+  background: var(--surface);
+}
+
+.dashboardAnnotation > div {
+  flex: 1;
+}
+
+.dashboardAnnotation h3 {
+  margin: 9px 0 6px;
+  font-size: 20px;
+  line-height: var(--leading-small-heading);
+  font-weight: 500;
+}
+
+.dashboardAnnotation p + p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.annotationIndex {
+  color: var(--accent);
+  font: 12px var(--font-mono);
+}
+
+.dashboardAnnotation > svg {
+  color: var(--accent);
+}
+
+@media (max-width: 700px) {
+  .dashboardDemo {
+    margin-top: 45px;
+  }
+
+  .dashboardImageWrap {
+    overflow: visible;
+  }
+
+  .dashboardImageWrap > img {
+    min-height: 280px;
+    object-fit: cover;
+    object-position: left top;
+  }
+
+  .dashboardHotspot span {
+    display: none;
+  }
+
+  .dashboardHotspot:focus-visible span {
+    display: block;
+    left: 28px;
+  }
+
+  .dashboardAnnotation {
+    padding: 18px;
+  }
+}

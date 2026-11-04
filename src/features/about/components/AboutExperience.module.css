@@ -1,0 +1,64 @@
+.experienceRow > span,
+.experienceRow div span {
+  color: var(--muted);
+  font: 11px var(--font-mono);
+}
+
+.experienceBlock {
+  margin-top: 130px;
+}
+
+.experienceRow {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-5);
+  border-bottom: 1px solid var(--border);
+  padding: 21px 0;
+}
+
+.experienceRow div {
+  display: flex;
+  gap: 35px;
+}
+
+.experienceRow strong {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.experienceDetail {
+  max-width: 650px;
+  margin: 14px 0 30px calc(33.33% + 15px);
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.additionalExperience {
+  margin-top: 95px;
+}
+
+@media (max-width: 700px) {
+  .experienceBlock {
+    margin-top: 80px;
+  }
+
+  .experienceRow,
+  .experienceRow div {
+    display: block;
+  }
+
+  .experienceRow > span,
+  .experienceRow div span {
+    display: block;
+    margin-top: var(--space-2);
+  }
+
+  .experienceDetail {
+    margin-left: 0;
+  }
+
+  .additionalExperience {
+    margin-top: 80px;
+  }
+}

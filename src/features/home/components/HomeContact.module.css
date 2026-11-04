@@ -1,0 +1,58 @@
+.contactBand h2 em {
+  color: var(--accent);
+  font-style: normal;
+}
+
+.contactBand h2 {
+  margin: 18px 0 0;
+  font-size: clamp(36px, 5vw, 66px);
+  line-height: var(--leading-heading);
+  letter-spacing: var(--tracking-heading);
+  font-weight: 500;
+}
+
+.contactBand {
+  color: var(--accent-ink);
+  background: var(--accent);
+}
+
+.contactBandInner {
+  padding-block: 110px;
+}
+
+.contactBand .eyebrow {
+  color: var(--accent-label);
+}
+
+.contactBand h2 {
+  margin-bottom: 52px;
+}
+
+.contactBand h2 em {
+  color: var(--accent-on-accent);
+}
+
+.buttonLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  border: 1px solid var(--accent-ink);
+  padding: 13px 17px;
+  font: 11px var(--font-mono);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition:
+    background var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.buttonLink:hover {
+  color: var(--accent-on-accent);
+  background: var(--accent-ink);
+}
+
+@media (max-width: 700px) {
+  .contactBandInner {
+    padding-block: 86px;
+  }
+}
