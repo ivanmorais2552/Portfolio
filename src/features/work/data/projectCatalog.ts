@@ -27,10 +27,10 @@ export const projects: Project[] = [
   {
     slug: 'research-grants-management',
     title: 'Research Grants Management',
-    summary: 'A case study placeholder for a workflow shaped by people, process, and policy.',
-    role: 'Product designer',
+    summary: 'Turning complex requirements into a complete grant management experience.',
+    role: 'Sole UX/UI Designer',
     year: '2026',
-    discipline: 'Product design',
+    discipline: 'Product design · 31 screens',
     accent: 'sand',
   },
   {

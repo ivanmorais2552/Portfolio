@@ -32,6 +32,28 @@
   color: var(--accent-hover);
 }
 
+.navigation a {
+  position: relative;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 8px;
+}
+
+.navigation .active {
+  color: var(--accent);
+}
+
+.navigation .active::after {
+  content: '';
+  position: absolute;
+  right: 8px;
+  bottom: 5px;
+  left: 8px;
+  height: 2px;
+  background: var(--accent);
+}
+
 .contactLink {
   display: flex;
   align-items: center;

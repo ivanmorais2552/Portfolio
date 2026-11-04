@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import { FultonPage } from '@/features/fulton/FultonPage';
+import { ResearchGrantsCaseStudy } from '@/features/work/ResearchGrantsCaseStudy';
 import { ProjectDetailPage } from '@/features/work/ProjectDetailPage';
 import { projects } from '@/features/work/data/projectCatalog';
 
@@ -15,5 +16,7 @@ export default async function Page({ params }: ProjectRouteProps) {
   const { slug } = await params;
   const project = projects.find((item) => item.slug === slug);
   if (!project) notFound();
-  return project.slug === 'fulton' ? <FultonPage /> : <ProjectDetailPage project={project} />;
+  if (project.slug === 'fulton') return <FultonPage />;
+  if (project.slug === 'research-grants-management') return <ResearchGrantsCaseStudy />;
+  return <ProjectDetailPage project={project} />;
 }

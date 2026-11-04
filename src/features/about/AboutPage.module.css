@@ -1,97 +1,314 @@
-.content {
-  padding-top: 100px;
+.page {
+  width: min(calc(100% - 32px), 1040px);
+  margin: 0 auto;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 100px;
+.introduction {
+  border-bottom: 1px solid var(--border);
+  padding: 72px 0 76px;
 }
 
-.largeCopy {
-  max-width: 530px;
-  margin: 40px 0 0;
-  font-size: clamp(26px, 3.1vw, 42px);
+.kicker,
+.sectionHeading h2,
+.educationFacts span,
+.skillRow h3 {
+  margin: 0;
+  color: var(--muted);
+  font: 11px/1.3 var(--font-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.introduction h1 {
+  max-width: 860px;
+  margin: 24px 0 26px;
+  font-size: clamp(48px, 7vw, 92px);
   line-height: var(--leading-display);
   letter-spacing: var(--tracking-display);
+  font-weight: 500;
 }
 
-.facts {
-  border-top: 1px solid var(--border);
+.introduction h1 em {
+  color: var(--accent);
+  font-style: normal;
 }
 
-.facts > div {
-  display: grid;
-  grid-template-columns: 1fr 1.4fr;
-  gap: 18px;
-  border-bottom: 1px solid var(--border);
-  padding: 19px 0;
-}
-
-.facts span,
-.facts small {
+.introductionCopy {
+  max-width: 650px;
+  margin: 0;
   color: var(--muted);
-  font: 11px var(--font-mono);
+  font-size: 15px;
+  line-height: 1.65;
 }
 
-.facts strong {
+.section {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: var(--space-12);
+  border-bottom: 1px solid var(--border);
+  padding: var(--space-12) 0;
+}
+
+.sectionHeading {
+  padding-top: 3px;
+}
+
+.sectionContent {
+  min-width: 0;
+}
+
+.entryHeader {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: var(--space-5);
+}
+
+.entryHeader h3,
+.awardEntry h3 {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.35;
+  font-weight: 500;
+}
+
+.entryHeader p,
+.awardEntry p,
+.serviceEntry p {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.entryHeader time,
+.serviceEntry time {
+  color: var(--muted);
+  font: 11px/1.4 var(--font-mono);
+  text-align: right;
+  white-space: nowrap;
+}
+
+.educationEntry {
+  padding-top: 3px;
+}
+
+.educationFacts {
+  display: grid;
+  grid-template-columns: minmax(110px, 0.7fr) minmax(0, 1.3fr);
+  gap: var(--space-5);
+  margin-top: var(--space-5);
+  border-top: 1px solid var(--border);
+  padding-top: var(--space-4);
+}
+
+.educationFacts p {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+}
+
+.educationFacts strong {
   font-size: 14px;
   font-weight: 500;
 }
 
-.facts small {
-  grid-column: 2;
-  line-height: 1.6;
+.entryList,
+.serviceList,
+.skillList {
+  display: grid;
+  gap: 0;
 }
 
-.awardBlock {
-  margin-top: 95px;
-}
-
-.awardBlock {
+.resumeEntry {
   border-top: 1px solid var(--border);
-  padding-top: 20px;
+  padding: var(--space-5) 0;
 }
 
-.awardCopy {
-  max-width: 620px;
-  margin: 32px 0 0 calc(33.33% + 15px);
-  font-size: 20px;
-  line-height: 1.5;
-  letter-spacing: var(--tracking-heading);
+.resumeEntry:first-child {
+  border-top: 0;
+  padding-top: 3px;
 }
 
-.awardCopy strong {
+.bulletList {
+  display: grid;
+  gap: 7px;
+  max-width: 720px;
+  margin: var(--space-4) 0 0;
+  padding-left: 18px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.bulletList li::marker {
   color: var(--accent);
+}
+
+.serviceList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.serviceEntry {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: var(--space-5);
+  border-top: 1px solid var(--border);
+  padding: var(--space-5) 0;
+}
+
+.serviceEntry:first-child {
+  border-top: 0;
+  padding-top: 3px;
+}
+
+.serviceEntry > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-5);
+}
+
+.serviceEntry strong {
+  font-size: 15px;
   font-weight: 500;
 }
 
+.serviceEntry span {
+  color: var(--muted);
+  font: 11px/1.4 var(--font-mono);
+}
+
+.serviceEntry p {
+  grid-column: 1 / -1;
+  max-width: 720px;
+  margin-top: -4px;
+}
+
+.skillRow {
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr);
+  align-items: start;
+  gap: var(--space-5);
+  border-top: 1px solid var(--border);
+  padding: var(--space-5) 0;
+}
+
+.skillRow:first-child {
+  border-top: 0;
+  padding-top: 3px;
+}
+
+.skillTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.skillTags span {
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 9px 12px;
+  color: var(--muted);
+  font: 11px/1.3 var(--font-mono);
+}
+
+.language {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.awardEntry {
+  padding-top: 3px;
+}
+
+@media (max-width: 900px) {
+  .section {
+    grid-template-columns: 140px minmax(0, 1fr);
+    gap: var(--space-8);
+  }
+}
+
 @media (max-width: 700px) {
-  .content {
-    padding-top: 70px;
+  .page {
+    width: min(100% - 32px, 1040px);
   }
 
-  .grid {
+  .introduction {
+    padding: 58px 0 60px;
+  }
+
+  .introduction h1 {
+    margin-top: 20px;
+    font-size: clamp(44px, 12vw, 68px);
+  }
+
+  .introductionCopy {
+    font-size: 14px;
+  }
+
+  .section {
+    display: block;
+    padding: 36px 0;
+  }
+
+  .sectionHeading {
+    margin-bottom: 20px;
+  }
+
+  .entryHeader,
+  .serviceEntry,
+  .skillRow,
+  .educationFacts {
     display: block;
   }
 
-  .facts {
-    margin-top: 70px;
+  .entryHeader time,
+  .serviceEntry time {
+    display: block;
+    margin-top: 8px;
+    text-align: left;
+    white-space: normal;
   }
 
-  .facts > div {
-    grid-template-columns: 1fr 1fr;
+  .educationFacts {
+    margin-top: var(--space-4);
   }
 
-  .facts small {
-    grid-column: 1 / -1;
+  .educationFacts p + p {
+    margin-top: var(--space-4);
   }
 
-  .awardCopy {
-    margin-left: 0;
+  .resumeEntry,
+  .serviceEntry,
+  .skillRow {
+    padding: var(--space-4) 0;
   }
 
-  .awardBlock {
-    margin-top: 80px;
+  .resumeEntry:first-child,
+  .serviceEntry:first-child,
+  .skillRow:first-child {
+    padding-top: 0;
+  }
+
+  .bulletList {
+    margin-top: var(--space-3);
+  }
+
+  .serviceEntry > div,
+  .skillTags {
+    gap: var(--space-2) var(--space-4);
+  }
+
+  .serviceEntry p {
+    margin-top: var(--space-2);
+  }
+
+  .skillRow h3 {
+    margin-bottom: var(--space-3);
   }
 }
