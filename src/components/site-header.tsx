@@ -1,6 +1,6 @@
-import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
-import { ThemeToggle } from "./theme-toggle";
+import Link from 'next/link';
+import { ArrowUpRight } from 'lucide-react';
+import { ThemeToggle } from './theme-toggle';
 
 export function SiteHeader() {
   return (
@@ -11,7 +11,9 @@ export function SiteHeader() {
       <nav aria-label="Main navigation">
         <Link href="/work">Work</Link>
         <Link href="/about">About</Link>
-        <Link href="/contact" className="nav-contact">Let&apos;s talk <ArrowUpRight size={14} /></Link>
+        <Link href="/contact" className="nav-contact">
+          Let&apos;s talk <ArrowUpRight size={14} />
+        </Link>
         <ThemeToggle />
       </nav>
     </header>

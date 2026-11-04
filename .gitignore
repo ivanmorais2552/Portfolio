@@ -8,6 +8,7 @@ out/
 # Build artifacts
 build/
 dist/
+*.tsbuildinfo
 
 # Local environment files
 .env*

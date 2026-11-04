@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image';
 
 type FultonImageProps = {
   src: string;
@@ -9,6 +9,23 @@ type FultonImageProps = {
   className?: string;
 };
 
-export function FultonImage({ src, alt, width, height, priority = false, className = "" }: FultonImageProps) {
-  return <Image className={className} src={src} alt={alt} width={width} height={height} priority={priority} sizes="(max-width: 700px) 100vw, 1200px" />;
+export function FultonImage({
+  src,
+  alt,
+  width,
+  height,
+  priority = false,
+  className = '',
+}: FultonImageProps) {
+  return (
+    <Image
+      className={className}
+      src={src}
+      alt={alt}
+      width={width}
+      height={height}
+      priority={priority}
+      sizes="(max-width: 700px) 100vw, 1200px"
+    />
+  );
 }
