@@ -2,7 +2,7 @@
 
 Audit date: November 3, 2026
 
-The folder contains 108 files: 98 PNG exports and 10 design-system PDFs. The PNGs are generally high-quality exports, with full screens at 3,840px wide and supporting crops between roughly 300px and 1,600px wide. The exports contain visible personal-looking names, Net IDs, email addresses, research text, and financial/tax-form content. The assets marked **restricted** should not be published without redaction or explicit approval.
+The folder contains 108 files: 98 PNG exports and 10 design-system PDFs. The PNGs are generally high-quality exports, with full screens at 3,840px wide and supporting crops between roughly 300px and 1,600px wide. The screenshot data is fictional and does not expose personal or confidential information, per Ivan's confirmation. Some screens still contain visually sensitive subject matter such as W-9 forms, signatures, email fields, IDs, and payment flows; those are marked for narrative and presentation judgment rather than privacy redaction.
 
 ## Recommended case-study direction
 
@@ -169,11 +169,11 @@ These PDFs are source references rather than direct page visuals. Use them to ve
 
 ## Privacy gate before implementation
 
-The current folder cannot be confirmed safe for direct publication. At minimum, redact or replace the following before the page goes live:
+The current folder is confirmed safe from a personal-data perspective because all screenshot content is fictional. Before publishing, review the following screens for presentation context and whether the subject matter belongs in the case study:
 
-- W-9, direct-deposit, tax, and signature content in `awards/Review.png`.
-- Email addresses in `printing/Manage Printers@2x.png`.
-- Names, Net IDs, poster filenames, research abstracts, and uploaded content in `submissions/Submission.png` and `admin/Admin Submission Details.png`.
-- Names, IDs, email addresses, payment data, RSVP information, dietary information, and other direct identifiers across admin, judging, printing, submissions, and awards screens.
+- W-9, direct-deposit, tax, and signature content in `awards/Review.png` may distract from the design narrative even though it is fictional.
+- Email fields in `printing/Manage Printers@2x.png` may be visually dense at portfolio scale.
+- Names, Net IDs, poster filenames, research abstracts, and uploaded content in `submissions/Submission.png` and `admin/Admin Submission Details.png` may be better used as supporting visuals than hero images.
+- Payment, RSVP, dietary-information, and other operational screens should be selected based on narrative value.
 
-The recommended implementation should use only approved/redacted exports, preserve the original files untouched, and include a visible note that the visuals are original design exports or portfolio recreations where applicable.
+The recommended implementation can use the original exports as provided, preserve the files untouched, and include a visible note that the visuals are original Fulton design exports where applicable.

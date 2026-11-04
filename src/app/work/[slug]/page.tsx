@@ -8,7 +8,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
   const { slug } = await params;
   const project = projects.find((item) => item.slug === slug);
   if (!project) notFound();
-  if (project.slug === "fulton") return <main><FultonCaseStudy /></main>;
+  if (project.slug === "fulton") return <FultonCaseStudy />;
   return <main><section className="case-hero page-container"><p className="eyebrow">Case study / placeholder</p><h1>{project.title}</h1><p className="case-hero-summary">{project.summary}</p><div className="case-meta-grid"><div><span>Role</span><strong>{project.role}</strong></div><div><span>Year</span><strong>{project.year}</strong></div><div><span>Discipline</span><strong>{project.discipline}</strong></div></div></section><section className="case-section page-container"><PlaceholderProject /></section></main>;
 }
 
