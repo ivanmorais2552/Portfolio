@@ -37,6 +37,7 @@
 }
 
 .content {
+  container-type: inline-size;
   display: flex;
   min-width: 0;
   flex-direction: column;
@@ -45,14 +46,13 @@
   padding: clamp(24px, 4vw, 54px);
 }
 
-.heading h2 {
+.project .heading h2 {
   max-width: 100%;
   margin: 20px 0 0;
   font-size: clamp(30px, 3.6vw, 52px);
   line-height: var(--leading-heading);
   letter-spacing: var(--tracking-heading);
   font-weight: 500;
-  overflow-wrap: anywhere;
 }
 
 .summary {
@@ -61,7 +61,18 @@
   color: var(--muted);
   font-size: clamp(16px, 1.6vw, 19px);
   line-height: 1.5;
-  overflow-wrap: anywhere;
+}
+
+@container (max-width: 300px) {
+  .project .heading h2 {
+    font-size: 32px;
+  }
+}
+
+@container (min-width: 301px) and (max-width: 380px) {
+  .project .heading h2 {
+    font-size: 40px;
+  }
 }
 
 .cta {
