@@ -1,0 +1,46 @@
+.interactive {
+  border: 1px solid var(--border);
+  background: var(--elevated);
+  transition:
+    border-color var(--transition-standard),
+    background-color var(--transition-standard);
+}
+
+.interactive:hover {
+  border-color: var(--accent);
+  background: var(--surface);
+}
+
+.interactive:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 5px;
+}
+
+.image {
+  transition: transform var(--transition-standard);
+}
+
+.interactive:hover .image {
+  transform: scale(1.015);
+}
+
+.ctaIcon {
+  transition: transform var(--transition-fast);
+}
+
+.interactive:hover .ctaIcon {
+  transform: translate(2px, -2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .interactive,
+  .image,
+  .ctaIcon {
+    transition: none;
+  }
+
+  .interactive:hover .image,
+  .interactive:hover .ctaIcon {
+    transform: none;
+  }
+}

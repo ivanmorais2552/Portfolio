@@ -26,6 +26,7 @@ export function FultonPrinting() {
               alt="Fulton printing management screen"
               width={3840}
               height={2462}
+              crop={{ aspectRatio: '16 / 9', objectPosition: '50% 18%', scale: 1.05 }}
             />
             <figcaption>Printing management · original export</figcaption>
           </figure>
@@ -45,6 +46,7 @@ export function FultonPrinting() {
                 alt="Fulton printer management screen"
                 width={3840}
                 height={1712}
+                crop={{ aspectRatio: '16 / 9', objectPosition: '50% 20%', scale: 1.04 }}
               />
               <figcaption>Printer management · supporting export</figcaption>
             </figure>

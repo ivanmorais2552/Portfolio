@@ -26,11 +26,13 @@
   background: var(--surface);
 }
 
-.visual img {
+.visual .image1,
+.visual .image2,
+.visual .image3 {
   position: absolute;
   display: block;
   width: 47%;
-  height: auto;
+  overflow: hidden;
   border: 1px solid var(--border);
   transition: transform var(--transition-standard);
 }

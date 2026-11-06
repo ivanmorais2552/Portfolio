@@ -3,8 +3,14 @@
 }
 
 .projectGrid {
-  margin-top: var(--space-16);
+  margin-top: var(--space-8);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--space-4);
+}
+
+@media (max-width: 700px) {
+  .projectGrid {
+    grid-template-columns: 1fr;
+  }
 }

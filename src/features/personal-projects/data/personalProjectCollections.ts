@@ -1,3 +1,5 @@
+import type { ProjectImageCrop } from '@/components/ui/ProjectImage';
+
 export type PersonalProjectCategory = 'web' | 'mobile' | 'graphics';
 export type GalleryLayout = 'feature' | 'standard' | 'portrait';
 
@@ -221,7 +223,28 @@ export const personalProjectCollections: PersonalProjectCollection[] = [
 ];
 
 export const personalProjectPreviewImages = [
-  personalProjectCollections[0].images[0],
-  personalProjectCollections[4].images[1],
-  personalProjectCollections[5].images[0],
+  {
+    image: personalProjectCollections[0].images[0],
+    crop: {
+      aspectRatio: '4 / 3',
+      objectPosition: '50% 50%',
+      scale: 1,
+    } satisfies ProjectImageCrop,
+  },
+  {
+    image: personalProjectCollections[4].images[1],
+    crop: {
+      aspectRatio: '4 / 3',
+      objectPosition: '50% 18%',
+      scale: 1.05,
+    } satisfies ProjectImageCrop,
+  },
+  {
+    image: personalProjectCollections[5].images[0],
+    crop: {
+      aspectRatio: '4 / 3',
+      objectPosition: '50% 50%',
+      scale: 1,
+    } satisfies ProjectImageCrop,
+  },
 ];

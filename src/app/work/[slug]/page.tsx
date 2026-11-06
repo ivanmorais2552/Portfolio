@@ -17,6 +17,6 @@ export default async function Page({ params }: ProjectRouteProps) {
   const project = projects.find((item) => item.slug === slug);
   if (!project) notFound();
   if (project.slug === 'fulton') return <FultonPage />;
-  if (project.slug === 'research-grants-management') return <ResearchGrantsPage />;
+  if (project.slug === 'research-grants') return <ResearchGrantsPage />;
   return <ProjectDetailPage project={project} />;
 }

@@ -1,6 +1,6 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowLeft, ArrowUpRight } from 'lucide-react';
+import { ProjectImage } from '@/components/ui/ProjectImage';
 import { consistencyExamples, grantsHomeScreen } from './data/researchGrantsContent';
 import { ResearchGrantsRoleExplorer } from './ResearchGrantsRoleExplorer';
 import styles from './ResearchGrantsPage.module.css';
@@ -67,17 +67,19 @@ export function ResearchGrantsPage() {
               <strong>March–April 2026</strong>
             </div>
           </div>
-          <figure className={styles.heroFigure}>
-            <Image
+          <div className={styles.heroFigure}>
+            <ProjectImage
               src={grantsHomeScreen.src}
               alt={grantsHomeScreen.alt}
               width={grantsHomeScreen.width}
               height={grantsHomeScreen.height}
+              crop={grantsHomeScreen.crop}
+              expand
               priority
+              caption={grantsHomeScreen.label}
               sizes="(max-width: 700px) 100vw, 1040px"
             />
-            <figcaption>{grantsHomeScreen.label}</figcaption>
-          </figure>
+          </div>
         </div>
       </section>
 
@@ -139,16 +141,16 @@ export function ResearchGrantsPage() {
             </p>
             <div className={styles.consistencyGrid}>
               {consistencyExamples.map((screen) => (
-                <figure key={screen.src}>
-                  <Image
-                    src={screen.src}
-                    alt={screen.alt}
-                    width={screen.width}
-                    height={screen.height}
-                    sizes="(max-width: 700px) 100vw, 30vw"
-                  />
-                  <figcaption>{screen.label}</figcaption>
-                </figure>
+                <ProjectImage
+                  key={screen.src}
+                  src={screen.src}
+                  alt={screen.alt}
+                  width={screen.width}
+                  height={screen.height}
+                  crop={screen.crop}
+                  caption={screen.label}
+                  sizes="(max-width: 700px) 100vw, 30vw"
+                />
               ))}
             </div>
           </div>

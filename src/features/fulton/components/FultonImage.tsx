@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import { ProjectImage, type ProjectImageCrop } from '@/components/ui/ProjectImage';
 
 type FultonImageProps = {
   src: string;
@@ -7,6 +7,7 @@ type FultonImageProps = {
   height: number;
   priority?: boolean;
   className?: string;
+  crop?: ProjectImageCrop;
 };
 
 export function FultonImage({
@@ -16,16 +17,19 @@ export function FultonImage({
   height,
   priority = false,
   className = '',
+  crop,
 }: FultonImageProps) {
   return (
-    <Image
+    <ProjectImage
       className={className}
       src={src}
       alt={alt}
       width={width}
       height={height}
+      crop={crop}
       priority={priority}
       sizes="(max-width: 700px) 100vw, 1200px"
+      wrapper="div"
     />
   );
 }

@@ -1,3 +1,5 @@
+import type { ProjectImageCrop } from '@/components/ui/ProjectImage';
+
 export type ResearchGrantRoleId = 'faculty' | 'judges' | 'administrators';
 
 export type ResearchGrantScreen = {
@@ -6,6 +8,7 @@ export type ResearchGrantScreen = {
   label: string;
   width: number;
   height: number;
+  crop?: ProjectImageCrop;
 };
 
 export type ResearchGrantRole = {
@@ -21,6 +24,15 @@ export const grantsHomeScreen: ResearchGrantScreen = {
   label: 'Grants home',
   width: 3840,
   height: 5800,
+  crop: {
+    aspectRatio: '16 / 10',
+    objectPosition: '50% 14%',
+    scale: 1.08,
+    responsive: {
+      tablet: { aspectRatio: '16 / 10', objectPosition: '50% 13%', scale: 1.06 },
+      mobile: { aspectRatio: '4 / 3', objectPosition: '50% 12%', scale: 1.1 },
+    },
+  },
 };
 
 export const researchGrantRoles: ResearchGrantRole[] = [

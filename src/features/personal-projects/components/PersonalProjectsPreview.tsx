@@ -1,6 +1,6 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
+import { ProjectImage } from '@/components/ui/ProjectImage';
 import { personalProjectPreviewImages } from '@/features/personal-projects/data/personalProjectCollections';
 import styles from './PersonalProjectsPreview.module.css';
 
@@ -8,14 +8,15 @@ export function PersonalProjectsPreview() {
   return (
     <Link className={styles.card} href="/work/personal-projects">
       <div className={styles.visual} aria-hidden="true">
-        {personalProjectPreviewImages.map((image, index) => (
-          <Image
+        {personalProjectPreviewImages.map(({ image, crop }, index) => (
+          <ProjectImage
             className={styles[`image${index + 1}`]}
             key={image.src}
             src={image.src}
             alt=""
             width={image.width}
             height={image.height}
+            crop={crop}
             sizes="(max-width: 700px) 30vw, 20vw"
           />
         ))}

@@ -30,6 +30,7 @@ export function FultonJudging() {
                   alt="Lead judge assignment screen"
                   width={3840}
                   height={2978}
+                  crop={{ aspectRatio: '4 / 3', objectPosition: '50% 8%', scale: 1.06 }}
                 />
                 <figcaption>Lead judge assignment · original export</figcaption>
               </figure>
@@ -39,6 +40,7 @@ export function FultonJudging() {
                   alt="Lead judge scoring screen"
                   width={3840}
                   height={2978}
+                  crop={{ aspectRatio: '4 / 3', objectPosition: '50% 8%', scale: 1.06 }}
                 />
                 <figcaption>Scoring overview · original export</figcaption>
               </figure>
