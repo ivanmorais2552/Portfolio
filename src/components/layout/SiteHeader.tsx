@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
 import { usePathname } from 'next/navigation';
+import { MobileMenu } from './MobileMenu';
 import { ThemeToggle } from './ThemeToggle';
 import styles from './SiteHeader.module.css';
 
@@ -45,6 +46,7 @@ export function SiteHeader() {
           Let&apos;s talk <ArrowUpRight size={14} />
         </Link>
         <ThemeToggle />
+        <MobileMenu pathname={pathname} />
       </nav>
     </header>
   );

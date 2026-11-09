@@ -32,6 +32,13 @@
   color: var(--accent-on-accent);
 }
 
+.actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+}
+
 .buttonLink {
   display: inline-flex;
   align-items: center;
@@ -49,6 +56,27 @@
 .buttonLink:hover {
   color: var(--accent-on-accent);
   background: var(--accent-ink);
+}
+
+.secondaryLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  border-bottom: 1px solid var(--accent-ink);
+  padding-block: var(--space-2);
+  font: 11px var(--font-mono);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.secondaryLink:hover {
+  border-bottom-width: 2px;
+}
+
+.buttonLink:focus-visible,
+.secondaryLink:focus-visible {
+  outline: 2px solid var(--accent-ink);
+  outline-offset: 4px;
 }
 
 @media (max-width: 700px) {

@@ -1,7 +1,10 @@
 import type { ProjectImageCrop } from '@/components/ui/ProjectImage';
 
+export type ProjectStatus = 'published' | 'gallery' | 'upcoming';
+
 export type Project = {
   slug: string;
+  status: ProjectStatus;
   title: string;
   summary: string;
   role: string;
@@ -19,6 +22,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     slug: 'fulton',
+    status: 'published',
     title: 'Fulton Conference Management',
     summary: 'Redesigning conference operations across judging, printing, and administration.',
     role: 'Lead UX/UI Designer',
@@ -38,6 +42,7 @@ export const projects: Project[] = [
   },
   {
     slug: 'research-grants',
+    status: 'published',
     title: 'Research Grants Management',
     summary:
       'A unified platform for faculty, judges, and administrators to manage research grants.',
@@ -61,6 +66,7 @@ export const projects: Project[] = [
   },
   {
     slug: 'conference-check-in',
+    status: 'upcoming',
     title: 'Conference Check-In',
     summary: 'A case study placeholder for making an in-person welcome feel simple.',
     role: 'Product designer',
@@ -70,6 +76,7 @@ export const projects: Project[] = [
   },
   {
     slug: 'byu-design-system',
+    status: 'upcoming',
     title: 'BYU Design System',
     summary: 'A growing library of reusable patterns, components, and shared decisions.',
     role: 'Product designer',
@@ -81,6 +88,7 @@ export const projects: Project[] = [
 
 export const personalProjectsProject: Project = {
   slug: 'personal-projects',
+  status: 'gallery',
   title: 'Personal Projects',
   summary: 'Digital products, visual identities, and ideas made for fun.',
   role: 'Independent work',
@@ -97,3 +105,7 @@ export const personalProjectsProject: Project = {
     scale: 1,
   },
 };
+
+export const selectedWorkProjects = [...projects, personalProjectsProject].filter(
+  (project) => project.status !== 'upcoming' && !project.featured,
+);

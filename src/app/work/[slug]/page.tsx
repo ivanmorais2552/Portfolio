@@ -18,5 +18,6 @@ export default async function Page({ params }: ProjectRouteProps) {
   if (!project) notFound();
   if (project.slug === 'fulton') return <FultonPage />;
   if (project.slug === 'research-grants') return <ResearchGrantsPage />;
-  return <ProjectDetailPage project={project} />;
+  if (project.status === 'upcoming') return <ProjectDetailPage project={project} />;
+  notFound();
 }

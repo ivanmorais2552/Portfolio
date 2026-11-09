@@ -2,8 +2,16 @@
   padding-top: 92px;
 }
 
+.backNavigation {
+  padding-block: 20px 96px;
+}
+
 @media (max-width: 700px) {
   .gallery {
     padding-top: 60px;
+  }
+
+  .backNavigation {
+    padding-bottom: 72px;
   }
 }

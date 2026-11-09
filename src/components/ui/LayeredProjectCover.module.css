@@ -1,0 +1,20 @@
+.image {
+  transform: var(--cover-transform);
+  transition: transform var(--transition-standard);
+}
+
+.cover:hover .image,
+.cover:focus-visible .image {
+  transform: var(--cover-hover-transform);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .image {
+    transition: none;
+  }
+
+  .cover:hover .image,
+  .cover:focus-visible .image {
+    transform: none;
+  }
+}

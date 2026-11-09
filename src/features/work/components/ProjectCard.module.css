@@ -13,6 +13,25 @@
   background: var(--elevated);
 }
 
+.workCard {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  border: 1px solid var(--border);
+}
+
+.workCard .visual {
+  height: auto;
+  min-height: 220px;
+  aspect-ratio: 1.65;
+  border: 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.workCard.personalProjectsCard .visual {
+  aspect-ratio: 2;
+}
+
 .projectImage {
   width: 100%;
   height: 100%;
@@ -90,11 +109,20 @@
   text-transform: uppercase;
 }
 
+.workCard .discipline {
+  margin: 0;
+}
+
 .info {
   display: flex;
   justify-content: space-between;
   gap: 18px;
   padding-top: 18px;
+}
+
+.workCard .info {
+  gap: 20px;
+  padding: 24px 26px 0;
 }
 
 .info h3 {
@@ -129,13 +157,42 @@
   text-transform: uppercase;
 }
 
+.workCard .meta {
+  gap: 12px;
+  margin-top: auto;
+  border-bottom: 0;
+  padding: 22px 26px 24px;
+}
+
 @media (max-width: 700px) {
   .visual {
     height: 285px;
   }
 
+  .workCard .visual {
+    min-height: 0;
+    aspect-ratio: 1.4;
+    height: auto;
+  }
+
+  .workCard.personalProjectsCard .visual {
+    aspect-ratio: 1.6;
+  }
+
+  .info {
+    padding-top: 18px;
+  }
+
+  .workCard .info {
+    padding: 24px 22px 0;
+  }
+
   .mockWindow {
     width: 78%;
     height: 65%;
+  }
+
+  .workCard .meta {
+    padding: 20px 22px 22px;
   }
 }

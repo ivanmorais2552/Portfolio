@@ -1,123 +1,59 @@
-.card {
-  display: block;
-  margin-bottom: var(--space-16);
-  border: 1px solid var(--border);
-  background: var(--elevated);
-  transition:
-    border-color var(--transition-standard),
-    background-color var(--transition-standard);
-}
-
-.card:hover {
-  border-color: var(--accent);
+.cover {
+  position: absolute;
+  inset: 0;
   background: var(--surface);
 }
 
-.card:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 4px;
-}
-
-.visual {
-  position: relative;
-  height: 280px;
-  overflow: hidden;
-  border-bottom: 1px solid var(--border);
-  background: var(--surface);
-}
-
-.visual .image1,
-.visual .image2,
-.visual .image3 {
+.layer {
   position: absolute;
   display: block;
   width: 47%;
   overflow: hidden;
   border: 1px solid var(--border);
-  transition: transform var(--transition-standard);
+  box-shadow: 0 14px 30px #111a121c;
 }
 
 .image1 {
   top: 22px;
   left: 7%;
-  transform: rotate(-4deg);
+  --cover-transform: rotate(-4deg);
+  --cover-hover-transform: translateY(-7px) rotate(0deg);
 }
 
 .image2 {
   top: 44px;
   left: 34%;
-  transform: rotate(3deg);
+  --cover-transform: rotate(3deg);
+  --cover-hover-transform: translateY(-7px) rotate(0deg);
 }
 
 .image3 {
   top: 16px;
   right: 7%;
-  transform: rotate(-2deg);
+  --cover-transform: rotate(-2deg);
+  --cover-hover-transform: translateY(-7px) rotate(0deg);
 }
 
-.card:hover .image1,
-.card:hover .image2,
-.card:hover .image3 {
-  transform: translateY(-7px) rotate(0);
-}
-
-.info {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  gap: var(--space-6);
-  padding: 22px 24px 24px;
-}
-
-.info p {
-  margin: 0;
-  color: var(--accent);
-  font: 10px var(--font-mono);
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-
-.info h2 {
-  margin: 9px 0 0;
-  font-size: 28px;
-  font-weight: 500;
-}
-
-.info span {
-  display: block;
-  margin-top: 7px;
-  color: var(--muted);
-  font-size: 13px;
-}
-
-.info > svg {
-  color: var(--accent);
-  flex: 0 0 auto;
-}
-
-@media (max-width: 700px) {
-  .visual {
-    height: 190px;
+@media (max-width: 900px) {
+  .layer {
+    width: 45%;
   }
 
-  .info {
-    display: block;
+  .image1 {
+    left: 6%;
+    --cover-transform: rotate(-3deg);
+    --cover-hover-transform: translateY(-6px) rotate(0deg);
   }
 
-  .info > svg {
-    margin-top: 18px;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .card,
-  .visual img {
-    transition: none;
+  .image2 {
+    left: 32%;
+    --cover-transform: rotate(2deg);
+    --cover-hover-transform: translateY(-6px) rotate(0deg);
   }
 
-  .card:hover .image1,
-  .card:hover .image2,
-  .card:hover .image3 {
-    transform: none;
+  .image3 {
+    right: 6%;
+    --cover-transform: rotate(-1deg);
+    --cover-hover-transform: translateY(-6px) rotate(0deg);
   }
 }

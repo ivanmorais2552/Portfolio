@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Download } from 'lucide-react';
+import { contactDetails } from '@/features/contact/data/contactDetails';
 import layoutStyles from '@/styles/Layout.module.css';
 import utilityStyles from '@/styles/Utility.module.css';
 import styles from './HomeContact.module.css';
@@ -14,9 +14,27 @@ export function HomeContact() {
           <br />
           <em>useful.</em>
         </h2>
-        <Link className={styles.buttonLink} href="/contact">
-          Get in touch <ArrowUpRight size={16} />
-        </Link>
+        <div className={styles.actions}>
+          <a className={styles.buttonLink} href={contactDetails.emailHref}>
+            Email me <ArrowUpRight size={16} aria-hidden="true" />
+          </a>
+          <a
+            className={styles.secondaryLink}
+            href={contactDetails.linkedInHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="View Ivan Morais on LinkedIn (opens in a new tab)"
+          >
+            LinkedIn <ArrowUpRight size={16} aria-hidden="true" />
+          </a>
+          <a
+            className={styles.secondaryLink}
+            href={contactDetails.resumeHref}
+            download="Ivan-Morais-Resume.pdf"
+          >
+            Download résumé <Download size={16} aria-hidden="true" />
+          </a>
+        </div>
       </div>
     </section>
   );

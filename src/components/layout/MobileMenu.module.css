@@ -1,0 +1,101 @@
+.root {
+  position: relative;
+  z-index: 20;
+  display: none;
+}
+
+.trigger {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--bg);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.trigger:hover {
+  border-color: var(--accent-hover);
+}
+
+.trigger:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 3px;
+}
+
+.panel {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  width: min(300px, calc(100vw - 32px));
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  box-shadow: 0 16px 32px #00000024;
+  opacity: 0;
+  transform: translateY(-6px);
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity var(--transition-fast),
+    transform var(--transition-fast),
+    visibility 0s linear 0.2s;
+}
+
+.panelOpen {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+  pointer-events: auto;
+  transition:
+    opacity var(--transition-fast),
+    transform var(--transition-fast),
+    visibility 0s;
+}
+
+.root .panel a {
+  min-height: 49px;
+  display: flex;
+  align-items: center;
+  border-left: 2px solid transparent;
+  padding: 13px 16px;
+  color: var(--text);
+  font: 11px var(--font-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.root .panel a + a {
+  border-top: 1px solid var(--border);
+}
+
+.root .panel a:hover {
+  background: var(--elevated);
+  color: var(--text);
+}
+
+.root .panel a[aria-current='page'] {
+  border-left-color: var(--accent-hover);
+  background: var(--elevated);
+}
+
+.root .panel a:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: -4px;
+}
+
+@media (max-width: 700px) {
+  .root {
+    display: block;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .panel,
+  .panelOpen {
+    transform: none;
+    transition: none;
+  }
+}

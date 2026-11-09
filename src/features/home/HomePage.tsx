@@ -6,7 +6,7 @@ import { ArrowUpRight } from 'lucide-react';
 import { FeaturedProject } from '@/features/work/components/FeaturedProject';
 import { ProjectCard } from '@/features/work/components/ProjectCard';
 import { TechnologyGrid } from '@/features/technologies/components/TechnologyGrid';
-import { projects } from '@/features/work/data/projectCatalog';
+import { projects, selectedWorkProjects } from '@/features/work/data/projectCatalog';
 import layoutStyles from '@/styles/Layout.module.css';
 import utilityStyles from '@/styles/Utility.module.css';
 import styles from './HomePage.module.css';
@@ -31,7 +31,7 @@ export function HomePage() {
         </div>
         <FeaturedProject project={projects[0]} />
         <div className={styles.projectGrid}>
-          {projects.slice(1, 3).map((project) => (
+          {selectedWorkProjects.map((project) => (
             <ProjectCard project={project} key={project.slug} />
           ))}
         </div>

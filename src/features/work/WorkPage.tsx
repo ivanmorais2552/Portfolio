@@ -1,11 +1,9 @@
 import { FeaturedProject } from '@/features/work/components/FeaturedProject';
 import { ProjectCard } from '@/features/work/components/ProjectCard';
 import { PageIntro } from '@/components/ui/PageIntro';
-import { personalProjectsProject, projects } from '@/features/work/data/projectCatalog';
+import { projects, selectedWorkProjects } from '@/features/work/data/projectCatalog';
 import layoutStyles from '@/styles/Layout.module.css';
 import styles from './WorkPage.module.css';
-
-const workGridProjects = [projects[1], projects[3], personalProjectsProject, projects[2]];
 
 export function WorkPage() {
   return (
@@ -24,8 +22,8 @@ export function WorkPage() {
       <section className={`${styles.overview} ${layoutStyles.pageContainer}`}>
         <FeaturedProject project={projects[0]} />
         <div className={styles.projectGrid}>
-          {workGridProjects.map((project) => (
-            <ProjectCard project={project} key={project.slug} />
+          {selectedWorkProjects.map((project) => (
+            <ProjectCard project={project} key={project.slug} variant="work" />
           ))}
         </div>
       </section>

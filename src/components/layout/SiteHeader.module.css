@@ -68,14 +68,10 @@
   }
 
   .navigation {
-    gap: 15px;
+    gap: 12px;
   }
 
-  .navigation > a:not(.contactLink) {
+  .navigation > a {
     display: none;
-  }
-
-  .contactLink {
-    font-size: 10px;
   }
 }

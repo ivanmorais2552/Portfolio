@@ -1,0 +1,66 @@
+.cover {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: #25292d;
+}
+
+.layer {
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  border: 1px solid #ffffff55;
+  background: #fff;
+  box-shadow: 0 14px 32px #080a0c55;
+}
+
+.home {
+  z-index: 1;
+  top: 10%;
+  left: 5%;
+  width: 31%;
+  --cover-transform: rotate(-3deg);
+  --cover-hover-transform: translate(-5px, -4px) rotate(-3deg);
+}
+
+.reviewer {
+  z-index: 3;
+  top: 23%;
+  left: 26%;
+  width: 50%;
+  --cover-transform: rotate(0deg);
+  --cover-hover-transform: translateY(-6px) rotate(0deg);
+}
+
+.admin {
+  z-index: 2;
+  top: 44%;
+  right: 5%;
+  width: 30%;
+  --cover-transform: rotate(3deg);
+  --cover-hover-transform: translate(5px, 3px) rotate(3deg);
+}
+
+@media (max-width: 900px) {
+  .home {
+    top: 11%;
+    left: 4%;
+    width: 30%;
+    --cover-transform: rotate(-2deg);
+    --cover-hover-transform: translate(-4px, -3px) rotate(-2deg);
+  }
+
+  .reviewer {
+    top: 25%;
+    left: 25%;
+    width: 51%;
+  }
+
+  .admin {
+    top: 45%;
+    right: 4%;
+    width: 29%;
+    --cover-transform: rotate(2deg);
+    --cover-hover-transform: translate(4px, 3px) rotate(2deg);
+  }
+}

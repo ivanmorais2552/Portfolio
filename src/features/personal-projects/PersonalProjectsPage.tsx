@@ -1,6 +1,9 @@
+import Link from 'next/link';
+import { ArrowUpRight } from 'lucide-react';
 import { PersonalProjectsGallery } from '@/features/personal-projects/components/PersonalProjectsGallery';
 import { PageIntro } from '@/components/ui/PageIntro';
 import layoutStyles from '@/styles/Layout.module.css';
+import utilityStyles from '@/styles/Utility.module.css';
 import styles from './PersonalProjectsPage.module.css';
 
 export function PersonalProjectsPage() {
@@ -20,6 +23,14 @@ export function PersonalProjectsPage() {
       <section className={`${styles.gallery} ${layoutStyles.pageContainer}`}>
         <PersonalProjectsGallery />
       </section>
+      <nav
+        className={`${styles.backNavigation} ${layoutStyles.pageContainer}`}
+        aria-label="Project navigation"
+      >
+        <Link className={utilityStyles.textLink} href="/work">
+          Back to selected work <ArrowUpRight size={16} aria-hidden="true" />
+        </Link>
+      </nav>
     </main>
   );
 }

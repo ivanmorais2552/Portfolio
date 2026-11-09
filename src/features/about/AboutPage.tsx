@@ -1,3 +1,5 @@
+import { Download } from 'lucide-react';
+import { contactDetails } from '@/features/contact/data/contactDetails';
 import styles from './AboutPage.module.css';
 
 const workExperience = [
@@ -76,6 +78,13 @@ export function AboutPage() {
           understanding complex problems, designing thoughtful experiences, and building technology
           that solves real problems.
         </p>
+        <a
+          className={styles.resumeLink}
+          href={contactDetails.resumeHref}
+          download="Ivan-Morais-Resume.pdf"
+        >
+          Download résumé <Download size={15} aria-hidden="true" />
+        </a>
       </section>
 
       <section className={styles.section} aria-labelledby="education-title">

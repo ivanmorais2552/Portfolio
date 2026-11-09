@@ -1,5 +1,6 @@
+import Link from 'next/link';
+import { ArrowUpRight } from 'lucide-react';
 import type { Project } from './data/projectCatalog';
-import { PlaceholderPanel } from '@/components/ui/PlaceholderPanel';
 import layoutStyles from '@/styles/Layout.module.css';
 import utilityStyles from '@/styles/Utility.module.css';
 import styles from './ProjectDetailPage.module.css';
@@ -10,7 +11,7 @@ export function ProjectDetailPage({ project }: ProjectDetailPageProps) {
   return (
     <main>
       <section className={`${styles.hero} ${layoutStyles.pageContainer}`}>
-        <p className={utilityStyles.eyebrow}>Case study / placeholder</p>
+        <p className={utilityStyles.eyebrow}>Upcoming case study</p>
         <h1>{project.title}</h1>
         <p className={styles.summary}>{project.summary}</p>
         <div className={styles.metaGrid}>
@@ -29,7 +30,10 @@ export function ProjectDetailPage({ project }: ProjectDetailPageProps) {
         </div>
       </section>
       <section className={`${styles.section} ${layoutStyles.pageContainer}`}>
-        <PlaceholderPanel label="Additional project details and original assets will be added when available." />
+        <p>This case study is being prepared.</p>
+        <Link className={utilityStyles.textLink} href="/work">
+          Explore published work <ArrowUpRight size={16} aria-hidden="true" />
+        </Link>
       </section>
     </main>
   );

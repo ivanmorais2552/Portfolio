@@ -240,7 +240,7 @@ export const personalProjectPreviewImages = [
     } satisfies ProjectImageCrop,
   },
   {
-    image: personalProjectCollections[5].images[0],
+    image: personalProjectCollections[3].images[4],
     crop: {
       aspectRatio: '4 / 3',
       objectPosition: '50% 50%',

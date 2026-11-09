@@ -1,20 +1,36 @@
 import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
 import { ProjectImage } from '@/components/ui/ProjectImage';
+import layeredCoverStyles from '@/components/ui/LayeredProjectCover.module.css';
+import { PersonalProjectsPreview } from '@/features/personal-projects/components/PersonalProjectsPreview';
 import type { Project } from '@/features/work/data/projectCatalog';
 import utilityStyles from '@/styles/Utility.module.css';
 import hoverStyles from './ProjectHover.module.css';
+import { ResearchGrantsPreview } from './ResearchGrantsPreview';
 import styles from './ProjectCard.module.css';
 
 type ProjectCardProps = {
   project: Project;
+  variant?: 'work';
 };
 
-export function ProjectCard({ project }: ProjectCardProps) {
+export function ProjectCard({ project, variant }: ProjectCardProps) {
+  const hasLayeredPreview =
+    variant === 'work' &&
+    (project.slug === 'personal-projects' || project.slug === 'research-grants');
+  const isPersonalProjects = variant === 'work' && project.slug === 'personal-projects';
+
   return (
-    <Link className={`${styles.card} ${hoverStyles.interactive}`} href={`/work/${project.slug}`}>
+    <Link
+      className={`${styles.card} ${variant === 'work' ? styles.workCard : ''} ${isPersonalProjects ? styles.personalProjectsCard : ''} ${hoverStyles.interactive} ${hasLayeredPreview ? layeredCoverStyles.cover : ''}`}
+      href={`/work/${project.slug}`}
+    >
       <div className={styles.visual} aria-hidden="true">
-        {project.image ? (
+        {variant === 'work' && project.slug === 'personal-projects' ? (
+          <PersonalProjectsPreview />
+        ) : variant === 'work' && project.slug === 'research-grants' ? (
+          <ResearchGrantsPreview />
+        ) : project.image ? (
           <ProjectImage
             className={`${styles.projectImage} ${hoverStyles.image}`}
             src={project.image}
@@ -46,7 +62,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
       </div>
       <div className={styles.info}>
         <div>
-          <p className={utilityStyles.eyebrow}>{project.discipline}</p>
+          <p className={`${utilityStyles.eyebrow} ${styles.discipline}`}>{project.discipline}</p>
           <h3>{project.title}</h3>
           <p className={styles.summary}>{project.summary}</p>
         </div>

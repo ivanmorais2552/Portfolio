@@ -41,6 +41,29 @@
   line-height: 1.65;
 }
 
+.resumeLink {
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-6);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: var(--space-2);
+  color: var(--text);
+  font: 11px var(--font-mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.resumeLink:hover {
+  border-color: var(--text);
+}
+
+.resumeLink:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 4px;
+}
+
 .section {
   display: grid;
   grid-template-columns: 180px minmax(0, 1fr);
