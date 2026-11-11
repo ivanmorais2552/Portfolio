@@ -7,28 +7,29 @@ import styles from '../FultonPage.module.css';
 export function FultonReflection() {
   return (
     <FultonReveal>
-      <section className={styles.mutedSection}>
+      <section className={styles.mutedSection} id="outcome">
         <div className={styles.mutedSectionInner}>
           <div className={styles.sectionLabel}>
-            <p className={utilityStyles.eyebrow}>08 / Implementation and reflection</p>
+            <p className={utilityStyles.eyebrow}>05 / Outcome</p>
           </div>
           <div className={styles.sectionContent}>
             <h2>
-              Designing for the
+              Designed for the work
               <br />
-              <em>people in the system.</em>
+              <em>behind the event.</em>
             </h2>
             <div className={styles.copyGrid}>
               <p>
                 The designs were implemented in the Angular platform. My contribution was the
-                product design work across the conference workflows, including the judging
-                experience, administrative controls, printing management, submissions, awards, and
-                the reusable interface system.
+                product design work across the conference workflows; I did not develop the
+                production Angular application. The intended scale is semiannual conferences with
+                approximately 500 participants per event, not a measured redesign outcome.
               </p>
               <p>
-                The platform supports semiannual conferences with approximately 500 participants per
-                event. The work reinforced how much clarity comes from designing the relationships
-                between workflows, not just the screens within them.
+                The work reinforced that complex operational systems are shaped by the relationships
+                between workflows, not just the screens within them. Repeated stakeholder
+                collaboration made those relationships visible and gave each workflow a clear path
+                from requirements to an approved design.
               </p>
             </div>
             <div className={styles.next}>

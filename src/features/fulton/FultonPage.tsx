@@ -1,11 +1,8 @@
 import { FultonHero } from './components/FultonHero';
 import { FultonOverview } from './components/FultonOverview';
-import { FultonDesignProcess } from './components/FultonDesignProcess';
 import { FultonWorkflow } from './components/FultonWorkflow';
-import { FultonJudging } from './components/FultonJudging';
-import { FultonPrinting } from './components/FultonPrinting';
-import { FultonAdministration } from './components/FultonAdministration';
-import { FultonSubmissionsAwards } from './components/FultonSubmissionsAwards';
+import { FultonDesignProcess } from './components/FultonDesignProcess';
+import { FultonSolution } from './components/FultonSolution';
 import { FultonReflection } from './components/FultonReflection';
 import styles from './FultonPage.module.css';
 
@@ -15,12 +12,9 @@ export function FultonPage() {
       <main className={styles.caseStudy}>
         <FultonHero />
         <FultonOverview />
-        <FultonDesignProcess />
         <FultonWorkflow />
-        <FultonJudging />
-        <FultonPrinting />
-        <FultonAdministration />
-        <FultonSubmissionsAwards />
+        <FultonDesignProcess />
+        <FultonSolution />
         <FultonReflection />
       </main>
     </div>

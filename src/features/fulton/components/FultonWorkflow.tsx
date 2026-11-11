@@ -6,19 +6,26 @@ import styles from '../FultonPage.module.css';
 export function FultonWorkflow() {
   return (
     <FultonReveal>
-      <section className={styles.section}>
+      <section className={styles.section} id="challenge">
         <div className={styles.sectionLabel}>
-          <p className={utilityStyles.eyebrow}>03 / Interactive workflow map</p>
+          <p className={utilityStyles.eyebrow}>02 / Challenge</p>
         </div>
         <div className={styles.sectionContent}>
           <h2>
-            Connected work,
+            One event,
             <br />
-            <em>made visible.</em>
+            <em>many connected workflows.</em>
           </h2>
           <p className={styles.lead}>
-            The conference experience moves through four connected workflows. Administration
-            provides the oversight layer across each one.
+            Conference operations move across submissions, printing, judging, and awards, with
+            administration providing oversight across the system. Faculty stakeholders had
+            identified confusing administrative navigation, judging workflows, printing operations,
+            and gaps in administrative control as problems worth rethinking.
+          </p>
+          <p className={styles.supportingCopy}>
+            The challenge was not simply to add screens for a new Angular application. It was to
+            make the relationships between responsibilities easier to understand while keeping the
+            people running the conference in control of their work.
           </p>
           <WorkflowMap />
         </div>

@@ -6,20 +6,48 @@ import styles from '../FultonPage.module.css';
 export function FultonPrinting() {
   return (
     <FultonReveal>
-      <section className={styles.section}>
+      <section className={styles.section} id="printing">
         <div className={styles.sectionLabel}>
-          <p className={utilityStyles.eyebrow}>05 / Printing experience</p>
+          <p className={utilityStyles.eyebrow}>04C / Printing</p>
         </div>
         <div className={styles.sectionContent}>
           <h2>
-            Operational clarity
+              Less Dependency.
             <br />
-            <em>before conference day.</em>
+              <em>More Control.</em>
           </h2>
           <p className={styles.lead}>
-            Printing management brings poster status, printer assignment, and issue reporting into
-            one operational workflow.
+            Printing staff previously needed administrator intervention to resolve printing
+            problems. I redesigned the workflow so the people handling printing could resolve
+            routine issues directly, while simplifying and reorganizing the interface.
           </p>
+          <div className={styles.decisionGrid}>
+            <div className={styles.decisionBlock}>
+              <p className={styles.decisionLabel}>Problem</p>
+              <p>Routine printing problems created unnecessary dependency on administrators.</p>
+            </div>
+            <div className={styles.decisionBlock}>
+              <p className={styles.decisionLabel}>Design decision</p>
+              <p>
+                I brought poster status, printer assignment, problem reporting, and issue resolution
+                into a simpler operational workflow.
+              </p>
+            </div>
+            <div className={styles.decisionBlock}>
+              <p className={styles.decisionLabel}>Why it matters</p>
+              <p>
+                Printing staff have greater control over resolving routine issues without requiring
+                administrative intervention.
+              </p>
+            </div>
+            <div className={styles.decisionBlock}>
+              <p className={styles.decisionLabel}>Outcome</p>
+                <p>
+                  The redesigned workflow removes the need for administrators to handle routine
+                  issue resolution.
+                </p>
+            </div>
+          </div>
           <figure className={styles.imageWide}>
             <FultonImage
               src="/images/fulton/printing/Printing%402x.png"
@@ -42,13 +70,12 @@ export function FultonPrinting() {
             </figure>
             <figure>
               <FultonImage
-                src="/images/fulton/printing/Manage%20Printers%402x.png"
-                alt="Fulton printer management screen"
-                width={3840}
-                height={1712}
-                crop={{ aspectRatio: '16 / 9', objectPosition: '50% 20%', scale: 1.04 }}
+                src="/images/fulton/printing/Print%20Note%20for%20Admin%402x.png"
+                alt="Fulton print note for an administrator"
+                width={1178}
+                height={594}
               />
-              <figcaption>Printer management · supporting export</figcaption>
+              <figcaption>Problem handoff and resolution · supporting export</figcaption>
             </figure>
           </div>
         </div>

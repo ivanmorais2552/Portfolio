@@ -7,25 +7,25 @@ import styles from '../FultonPage.module.css';
 export function FultonDesignProcess() {
   return (
     <FultonReveal>
-      <section className={styles.mutedSection}>
+      <section className={styles.mutedSection} id="process">
         <div className={styles.mutedSectionInner}>
           <div className={styles.sectionLabel}>
-            <p className={utilityStyles.eyebrow}>02 / The design process</p>
+            <p className={utilityStyles.eyebrow}>03 / Process</p>
           </div>
           <div className={styles.sectionContent}>
             <h2>
-              Work through one
+              Define, design,
               <br />
-              <em>workflow at a time.</em>
+              <em>review, refine.</em>
             </h2>
             <div className={styles.processSteps}>
               {[
-                'Define workflow',
+                'Define',
                 'Design',
-                'Stakeholder review',
-                'Iterate',
-                'Finalize',
-                'Next workflow',
+                'Review',
+                'Refine',
+                'Repeat',
+                'Approve',
               ].map((step, index) => (
                 <div key={step}>
                   <span>0{index + 1}</span>
@@ -43,11 +43,20 @@ export function FultonDesignProcess() {
               />
               <p>Original judging wireframe · workflow relationships and role responsibilities</p>
             </div>
-            <p className={styles.supportingCopy}>
-              Meetings occurred biweekly. Each cycle focused on clarifying a single workflow,
-              reviewing the proposed direction with stakeholders, incorporating feedback, and
-              finalizing the experience before moving to the next one.
-            </p>
+            <div className={styles.copyGrid}>
+              <p>
+                For each workflow, we discussed requirements and desired functionality, defined the
+                flow with stakeholders, and then I independently created the Figma designs. I
+                presented the work during biweekly meetings and used those conversations to guide
+                the next revision.
+              </p>
+              <p>
+                Reviews covered navigation, button placement, feature organization, scoring
+                requirements, judge assignments, permissions, printing operations, and
+                administrative capabilities. We repeated the review and refinement process as many
+                times as necessary before stakeholders approved a workflow and we moved to the next.
+              </p>
+            </div>
           </div>
         </div>
       </section>

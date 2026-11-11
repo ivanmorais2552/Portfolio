@@ -32,7 +32,7 @@ export function HomePage() {
         <FeaturedProject project={projects[0]} />
         <div className={styles.projectGrid}>
           {selectedWorkProjects.map((project) => (
-            <ProjectCard project={project} key={project.slug} />
+            <ProjectCard project={project} key={project.slug} variant="work" />
           ))}
         </div>
         <Link className={`${utilityStyles.textLink} ${styles.sectionLink}`} href="/work">

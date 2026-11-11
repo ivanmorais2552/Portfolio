@@ -15,7 +15,7 @@ export function FultonHero() {
           <span>/</span>
           <span>Fulton</span>
         </div>
-        <p className={`${utilityStyles.eyebrow} ${styles.heroKicker}`}>Flagship case study / 01</p>
+        <p className={`${utilityStyles.eyebrow} ${styles.heroKicker}`}>Case study / 01</p>
         <h1>Fulton Conference Management</h1>
         <p className={styles.subtitle}>
           Redesigning the workflows behind a university research conference.
@@ -25,7 +25,7 @@ export function FultonHero() {
             <b>Role</b>Lead UX/UI Designer
           </span>
           <span>
-            <b>Organization</b>BYU
+            <b>Organization</b>Brigham Young University
           </span>
           <span>
             <b>Year</b>2026

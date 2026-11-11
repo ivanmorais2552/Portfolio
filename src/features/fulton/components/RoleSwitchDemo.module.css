@@ -150,24 +150,6 @@
   background: var(--accent);
 }
 
-.demoAction {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2);
-  margin-top: 26px;
-  border: 1px solid var(--border);
-  padding: 11px 14px;
-  background: transparent;
-  color: var(--text);
-  font: 10px var(--font-mono);
-  cursor: pointer;
-}
-
-.demoAction:hover {
-  border-color: var(--accent-hover);
-  color: var(--accent-hover);
-}
-
 @media (max-width: 900px) and (min-width: 701px) {
   .demoCardGrid {
     grid-template-columns: 1fr;

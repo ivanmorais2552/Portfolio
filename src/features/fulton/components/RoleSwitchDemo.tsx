@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import { ArrowRight } from 'lucide-react';
 import utilityStyles from '@/styles/Utility.module.css';
 import styles from './RoleSwitchDemo.module.css';
 
@@ -82,10 +81,6 @@ export function RoleSwitchDemo() {
               </div>
             ))}
           </div>
-          <button className={styles.demoAction}>
-            {role === 'judge' ? 'Open assigned work' : 'Review conference progress'}
-            <ArrowRight size={15} />
-          </button>
         </div>
       </div>
     </div>

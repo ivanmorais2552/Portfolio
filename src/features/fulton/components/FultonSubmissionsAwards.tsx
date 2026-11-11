@@ -8,17 +8,18 @@ export function FultonSubmissionsAwards() {
     <FultonReveal>
       <section className={styles.section}>
         <div className={styles.sectionLabel}>
-          <p className={utilityStyles.eyebrow}>07 / Submissions and awards</p>
+          <p className={utilityStyles.eyebrow}>Supporting workflows</p>
         </div>
         <div className={styles.sectionContent}>
           <h2>
-            From first submission
+            The connected system,
             <br />
-            <em>to final recognition.</em>
+            <em>beyond the centerpiece.</em>
           </h2>
           <p className={styles.lead}>
-            Submission and award management complete the conference loop. These screens show the
-            connected moments without making claims about outcomes beyond the implemented designs.
+            Submissions and awards remain part of the broader conference workflow. They are included
+            here as supporting evidence of the system&apos;s scope, while the three design decisions
+            above carry the narrative focus.
           </p>
           <div className={styles.imagePair}>
             <figure>

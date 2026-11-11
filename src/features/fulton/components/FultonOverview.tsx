@@ -7,25 +7,27 @@ export function FultonOverview() {
     <FultonReveal>
       <section className={styles.section} id="overview">
         <div className={styles.sectionLabel}>
-          <p className={utilityStyles.eyebrow}>01 / Project overview</p>
+          <p className={utilityStyles.eyebrow}>01 / Overview</p>
         </div>
         <div className={styles.sectionContent}>
           <h2>
-            One platform.
+            A conference platform,
             <br />
-            <em>Many responsibilities.</em>
+            <em>redesigned from the ground up.</em>
           </h2>
           <div className={styles.copyGrid}>
             <p>
-              Fulton Conference Management was transitioning from Mendix to Angular. Instead of
-              reproducing the old interface, the team used the transition as an opportunity to
-              rethink the product experience from the ground up.
+              Fulton Conference Management supports the operations behind semiannual research
+              conferences at Brigham Young University, with approximately 500 participants per
+              event. The engineering team was migrating the platform from Mendix to Angular, so we
+              used the transition as an opportunity to rethink the experience instead of reproducing
+              an interface I had never seen.
             </p>
             <p>
-              Faculty had expressed frustrations with confusing workflows, the judging process, and
-              slow, problematic printing operations. I owned the design work and collaborated with
-              faculty leadership and the web team manager, with stakeholders providing final
-              approval on features and designs.
+              I led the UX/UI design and collaborated with the assistant to the dean, web team
+              manager, and conference administrator. Stakeholders defined requirements and retained
+              final approval over features and designs; I translated those needs into the interface
+              and carried each workflow through review and refinement.
             </p>
           </div>
         </div>
