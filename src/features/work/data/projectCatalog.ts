@@ -76,13 +76,22 @@ export const projects: Project[] = [
   },
   {
     slug: 'byu-design-system',
-    status: 'upcoming',
+    status: 'published',
     title: 'BYU Design System',
-    summary: 'A growing library of reusable patterns, components, and shared decisions.',
-    role: 'Product designer',
+    summary: 'A shared component library connecting design and development.',
+    role: 'Sole UX/UI Designer',
     year: '2026',
-    discipline: 'Design systems',
+    discipline: 'Design systems · 102 variants',
     accent: 'blue',
+    image: '/images/byu-design-system/00-component-overview-light-dark.png',
+    imageAlt: 'BYU Design System complete light and dark component overview',
+    imageWidth: 1930,
+    imageHeight: 1242,
+    imageCrop: {
+      aspectRatio: '16 / 10',
+      objectPosition: '50% 50%',
+      scale: 1,
+    },
   },
 ];
 

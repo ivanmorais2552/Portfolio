@@ -3,6 +3,7 @@ import { ArrowUpRight } from 'lucide-react';
 import { ProjectImage } from '@/components/ui/ProjectImage';
 import layeredCoverStyles from '@/components/ui/LayeredProjectCover.module.css';
 import { PersonalProjectsPreview } from '@/features/personal-projects/components/PersonalProjectsPreview';
+import { DesignSystemPreview } from './DesignSystemPreview';
 import type { Project } from '@/features/work/data/projectCatalog';
 import utilityStyles from '@/styles/Utility.module.css';
 import hoverStyles from './ProjectHover.module.css';
@@ -19,6 +20,7 @@ export function ProjectCard({ project, variant }: ProjectCardProps) {
     variant === 'work' &&
     (project.slug === 'personal-projects' || project.slug === 'research-grants');
   const isPersonalProjects = variant === 'work' && project.slug === 'personal-projects';
+  const isDesignSystem = variant === 'work' && project.slug === 'byu-design-system';
 
   return (
     <Link
@@ -30,6 +32,8 @@ export function ProjectCard({ project, variant }: ProjectCardProps) {
           <PersonalProjectsPreview />
         ) : variant === 'work' && project.slug === 'research-grants' ? (
           <ResearchGrantsPreview />
+        ) : isDesignSystem ? (
+          <DesignSystemPreview />
         ) : project.image ? (
           <ProjectImage
             className={`${styles.projectImage} ${hoverStyles.image}`}

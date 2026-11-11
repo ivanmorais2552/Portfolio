@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation';
+import { DesignSystemPage } from '@/features/design-system/DesignSystemPage';
 import { FultonPage } from '@/features/fulton/FultonPage';
 import { ProjectDetailPage } from '@/features/work/ProjectDetailPage';
 import { ResearchGrantsPage } from '@/features/work/ResearchGrantsPage';
@@ -18,6 +19,7 @@ export default async function Page({ params }: ProjectRouteProps) {
   if (!project) notFound();
   if (project.slug === 'fulton') return <FultonPage />;
   if (project.slug === 'research-grants') return <ResearchGrantsPage />;
+  if (project.slug === 'byu-design-system') return <DesignSystemPage />;
   if (project.status === 'upcoming') return <ProjectDetailPage project={project} />;
   notFound();
 }
